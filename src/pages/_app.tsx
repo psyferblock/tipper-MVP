@@ -19,7 +19,9 @@ function MyApp({
       initialSession={pageProps.initialSession}
     >
       <NavBar />
-      <Component {...pageProps} />
+      <div className="bg-gray-200 h-full px-12 py-8">
+        <Component {...pageProps} />
+      </div>
     </SessionContextProvider>
   );
 }

@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <>
-      <div className="pt-4 pb-8 text-2xl font-bold">Profile</div>
+      <div className=" pb-8 text-2xl font-bold">Profile</div>
       <div className="flex flex-col space-y-5 w-full px-[155px]">
         {/* CREATE ENTITY CONTAINER */}
         <div className="h-fit bg-white rounded-lg py-4 drop-shadow-lg px-6">
@@ -40,7 +40,7 @@ export default function Home() {
               </div>
             </div>
             <div className="w-5/12 h-full space-y-3">
-              <div>
+              <div className="space-y-1">
                 <label
                   htmlFor="names"
                   className="text-xs text-gray-600 font-medium pb-5"
@@ -52,24 +52,24 @@ export default function Home() {
                   type="text"
                   name="names"
                   id="names"
-                  className="h-10 block w-full rounded-md border-gray-300 pl-4 pr-12 mb-3 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                  placeholder="Sarah Moukarzel"
+                  className="h-12 block w-full rounded-md border-gray-300 pl-4 pr-12 mb-3 focus:border-indigo-500 focus:ring-indigo-500 text-xs sm:text-sm"
+                  placeholder="Enter First and Last Name"
                 />
               </div>
-              <div>
+              <div className="space-y-1">
                 <label
                   htmlFor="names"
                   className="text-xs text-gray-600 font-medium pb-3"
                 >
-                  First and Last Name*
+                  Date of birth*
                 </label>
-                {/* FIRST AND LAST NAME INPUT FIELD */}
+                {/* DATE OF BIRTH INPUT FIELD */}
                 <input
-                  type="text"
-                  name="names"
-                  id="names"
-                  className="h-10 block w-full rounded-md border-gray-300 pl-4 pr-12 mb-3 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                  placeholder="Sarah Moukarzel"
+                  type="date"
+                  name="dateofbirth"
+                  id="dateofbirth"
+                  className="h-12 text-gray-600 block w-full rounded-md border-gray-300 pl-4 pr-12 mb-3 focus:border-indigo-500 focus:ring-indigo-500 text-xs sm:text-sm"
+                  placeholder="Enter Date of Birth"
                 />
               </div>
             </div>
@@ -80,67 +80,71 @@ export default function Home() {
               >
                 Gender*
               </label>
-              <div className="flex items-center flex-start space-x-9">
-                <div>
-                  <input
-                    id="default-radio-1"
-                    type="radio"
-                    value=""
-                    name="default-radio"
-                    className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-100 dark:border-gray-600"
-                  />
-                  <label
-                    htmlFor="default-radio-1"
-                    className="ml-2 text-xs font-normal text-gray-900 dark:text-gray-500"
-                  >
-                    Male
-                  </label>
+              <div className="space-y-6">
+                <div className="flex items-center flex-start space-x-9 py-2">
+                  <div>
+                    <input
+                      id="default-radio-1"
+                      type="radio"
+                      value=""
+                      name="default-radio"
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-100 dark:border-gray-600"
+                    />
+                    <label
+                      htmlFor="default-radio-1"
+                      className="ml-2 text-xs font-normal text-gray-900 dark:text-gray-500"
+                    >
+                      Male
+                    </label>
+                  </div>
+                  <div>
+                    <input
+                      id="default-radio-1"
+                      type="radio"
+                      value=""
+                      name="default-radio"
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-100 dark:border-gray-600"
+                    />
+                    <label
+                      htmlFor="default-radio-1"
+                      className="ml-2 text-xs font-normal text-gray-900 dark:text-gray-500"
+                    >
+                      Female
+                    </label>
+                  </div>
+                  <div>
+                    <input
+                      id="default-radio-1"
+                      type="radio"
+                      value=""
+                      name="default-radio"
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-100 dark:border-gray-600"
+                    />
+                    <label
+                      htmlFor="default-radio-1"
+                      className="ml-2 text-xs font-normal text-gray-900 dark:text-gray-500"
+                    >
+                      Other
+                    </label>
+                  </div>
                 </div>
-                <div>
-                  <input
-                    id="default-radio-1"
-                    type="radio"
-                    value=""
-                    name="default-radio"
-                    className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-100 dark:border-gray-600"
-                  />
+                <div className="space-y-1">
                   <label
-                    htmlFor="default-radio-1"
-                    className="ml-2 text-xs font-normal text-gray-900 dark:text-gray-500"
+                    htmlFor="names"
+                    className="text-xs text-gray-600 font-medium"
                   >
-                    Female
+                    Contact Number*
                   </label>
-                </div>
-                <div>
+                  {/* FIRST AND LAST NAME INPUT FIELD */}
                   <input
-                    id="default-radio-1"
-                    type="radio"
-                    value=""
-                    name="default-radio"
-                    className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-100 dark:border-gray-600"
+                    type="text"
+                    name="names"
+                    id="names"
+                    className="h-12 block w-full rounded-md border-gray-300 pl-4 pr-12  focus:border-indigo-500 focus:ring-indigo-500 text-xs sm:text-sm"
+                    placeholder="Enter Number"
                   />
-                  <label
-                    htmlFor="default-radio-1"
-                    className="ml-2 text-xs font-normal text-gray-900 dark:text-gray-500"
-                  >
-                    Other
-                  </label>
                 </div>
               </div>
-              <label
-                htmlFor="names"
-                className="text-xs text-gray-600 font-medium"
-              >
-                First and Last Name*
-              </label>
-              {/* FIRST AND LAST NAME INPUT FIELD */}
-              <input
-                type="text"
-                name="names"
-                id="names"
-                className="h-10 block w-full rounded-md border-gray-300 pl-4 pr-12 mt-2 mb-6 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                placeholder="Sarah Moukarzel"
-              />
             </div>
           </div>
         </div>
@@ -148,28 +152,64 @@ export default function Home() {
         {/* ////////////////////////////////////////////////////////////////////////////////////////////// */}
 
         <div className="h-fit bg-white rounded-lg py-4 drop-shadow-lg px-6">
-          <div className="font-semibold text-lg grow pb-2">Security</div>
+          <div className="font-semibold text-lg pb-2">Security</div>
           <div className="flex flex-col">
             <div className="flex items-center">
-              <div className="mr-4">
+              <div className="mr-4 space-y-1">
                 <label
                   htmlFor="names"
-                  className="text-xs text-gray-600 font-medium pb-3"
+                  className="text-xs text-gray-600 font-medium"
                 >
                   Current Password
                 </label>
                 {/* FIRST AND LAST NAME INPUT FIELD */}
-                <input
-                  type="text"
-                  name="names"
-                  id="names"
-                  className="h-10 block w-full rounded-md border-gray-300 pl-4 pr-12 mb-3 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                  placeholder="●●●●●"
-                />
+                <div className="flex space-x-6">
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    className="h-12  block rounded-md border-gray-300 pl-4 pr-12 mb-3 focus:border-indigo-500 focus:ring-indigo-500 text-xs sm:text-sm"
+                    placeholder="Password"
+                  />
+                  <button className="text-xs text-blue-500 mb-3 font-medium">
+                    Change
+                  </button>
+                </div>
               </div>
-              <button className="text-xs text-blue-500 mt-3 font-medium">
-                Change
-              </button>
+            </div>
+          </div>
+        </div>
+        {/* ////////////////////////////////////////////////////////////////////////////////////////////// */}
+
+        {/* CREATE ENTITY CONTAINER */}
+        <div className="h-fit bg-white rounded-lg py-4 drop-shadow-lg px-6">
+          <p className=" font-bold text-lg pb-4">Activities History</p>
+          <div className="divide-y space-y-2">
+            <div className="flex justify-between">
+              <p className="text-xs">
+                You just created a new menu category, "Discounts" for your
+                entity "Meshmosh"
+              </p>
+              <p className="text-xs text-gray-500">10-06-2023</p>
+            </div>
+            <div className="flex justify-between pt-2">
+              <p className="text-xs">
+                You added a link to you Instagram page on your entity's page
+                "Meshomosh"
+              </p>
+              <p className="text-xs text-gray-500">10-06-2023</p>
+            </div>
+            <div className="flex justify-between pt-2">
+              <p className="text-xs">
+                You added a new highlight reel on your entity's page "Meshmosh"
+              </p>
+              <p className="text-xs text-gray-500">10-03-2023</p>
+            </div>
+            <div className="flex justify-between pt-2">
+              <p className="text-xs">
+                You published your entity "Meshmosh" on Tipper
+              </p>
+              <p className="text-xs text-gray-500">22-01-2023</p>
             </div>
           </div>
         </div>

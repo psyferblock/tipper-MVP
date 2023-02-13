@@ -9,7 +9,6 @@ export default function Home() {
   return (
     <>
       {/* PAGE BG COLOR AND PADDING  */}
-      {/* <div className="bg-gray-200 h-full px-12"> */}
       <div className="font-bold text-2xl pt-6 pb-4">Manage Entity</div>
       <div className="flex">
         {/* LEFT MENU */}
@@ -380,7 +379,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* </div> */}
     </>
   );
 }
