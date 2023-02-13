@@ -5,10 +5,6 @@ import ManageEntityMenu from "@/components/ManageEntityLeftMenu";
 export default function Home() {
   return (
     <>
-      {/* NAVBAR */}
-      <div className="bg-gray-500 h-[67px]">
-        <div className="ml-12 text-white text-lg">Tipper</div>
-      </div>
       {/* PAGE BG COLOR AND PADDING */}
       <div className="bg-gray-200 h-screen px-12">
         <div className="font-bold text-2xl pt-6 pb-4">Manage Entity</div>
@@ -18,7 +14,7 @@ export default function Home() {
 
           {/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
-          <div className="flex flex-col space-y-4 w-full">
+          <div className="flex flex-col space-y-5 w-full">
             {/* ANNOUNCEMENT BANNERS CONTAINER */}
             <div className="h-fit  bg-white rounded-lg p-4 drop-shadow-lg">
               <div className="text-lg font-bold grow">Manage Rate</div>

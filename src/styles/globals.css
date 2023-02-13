@@ -3,8 +3,14 @@
 @tailwind utilities;
 
 @layer base{
-  /* html{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  } */
+  html{
+    /* background color */
+    --tw-bg-opacity: 1;
+    background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+    /* height */
+    height: 100%;
+    /* background padding */
+    padding-left: 3rem/* 48px */;
+    padding-right: 3rem/* 48px */;
+  }
 }
-
