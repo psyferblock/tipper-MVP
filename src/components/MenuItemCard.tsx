@@ -2,16 +2,25 @@ export default function Home() {
   const itemPicture = true;
 
   return (
-    <div className="bg-white">
+    <div className="bg-white rounded-md w-[198px] ml-32">
       {itemPicture && (
         <img
-          className="inline-block mb-2 rounded-full ring-2 ring-white"
-          src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+          className="w-full"
+          src="https://cdn.ldsliving.com/dims4/default/2040800/2147483647/strip/true/crop/640x395+0+0/resize/640x395!/format/webp/quality/90/?url=http%3A%2F%2Flds-living-brightspot.s3.amazonaws.com%2F7c%2F30%2F864e82a22a48241f8a28bc7abb4d%2F42088.jpg"
           alt=""
         />
       )}
-      <p className="font-semibold">Pasta Bolognese</p>
-      <p>Ch</p>
+      <div className="py-4 text-xs">
+        <div className="flex items-center justify-between px-2 font-bold">
+          <p>Chicken Pasta</p>
+          <p>350,000 LBP</p>
+        </div>
+        <p className="px-3">
+          Fresh natural home made pasta dough, locally-fed chicken breast
+          pieces, tomato sauce, parmesan, mushrooms, garlic, coriander, green
+          pepper.
+        </p>
+      </div>
     </div>
   );
 }

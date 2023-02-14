@@ -1,3 +1,6 @@
+import MenuItemCard from "@/components/MenuItemCard";
+import MenuNavigation from "@/components/MenuNavigation";
+
 export default function Home() {
   return (
     <>
@@ -175,7 +178,20 @@ export default function Home() {
 
       {/* OUR MENU SECTION */}
       <div className="bg-white py-8">
-        <p className="flex justify-center mt-5 font-bold">Our Menu</p>
+        <div className="flex">
+          <p className="flex justify-center mt-5 font-bold">Our Menu</p>
+          <p>(Rate: 45,000LBP)</p>
+        </div>
+        <div className="flex">
+          <MenuNavigation />
+          <div className="grid">
+            <MenuItemCard /> <MenuItemCard />
+            <MenuItemCard />
+            <MenuItemCard />
+            <MenuItemCard />
+            <MenuItemCard />
+          </div>
+        </div>
       </div>
 
       {/* ////////////////////////////////////////////////////////////////////////////////////////////// */}
