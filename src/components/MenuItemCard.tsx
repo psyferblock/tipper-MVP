@@ -2,7 +2,7 @@ export default function Home() {
   const itemPicture = true;
 
   return (
-    <div className="bg-white rounded-md w-[198px] ml-32">
+    <div className="bg-white rounded-md w-[198px] overflow-hidden drop-shadow-lg">
       {itemPicture && (
         <img
           className="w-full"
@@ -11,7 +11,7 @@ export default function Home() {
         />
       )}
       <div className="py-4 text-xs">
-        <div className="flex items-center justify-between px-2 font-bold">
+        <div className="flex justify-between px-2 font-bold">
           <p>Chicken Pasta</p>
           <p>350,000 LBP</p>
         </div>

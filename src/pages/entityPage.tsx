@@ -177,15 +177,22 @@ export default function Home() {
       {/* ////////////////////////////////////////////////////////////////////////////////////////////// */}
 
       {/* OUR MENU SECTION */}
-      <div className="bg-white py-8">
-        <div className="flex">
-          <p className="flex justify-center mt-5 font-bold">Our Menu</p>
-          <p>(Rate: 45,000LBP)</p>
+      <div className="bg-gray-100 py-8">
+        <div className="text-center my-5">
+          <p className="font-bold">Our Menu</p>
+          <p className="text-xs font-semibold">(Rate: 45,000LBP)</p>
         </div>
         <div className="flex">
-          <MenuNavigation />
-          <div className="grid">
-            <MenuItemCard /> <MenuItemCard />
+          <div className="w-1/6">
+            <MenuNavigation />
+          </div>
+          <div className="grid grid-rows-2 grid-flow-col gap-4">
+            <MenuItemCard />
+            <MenuItemCard />
+            <MenuItemCard />
+            <MenuItemCard />
+            <MenuItemCard />
+            <MenuItemCard />
             <MenuItemCard />
             <MenuItemCard />
             <MenuItemCard />
