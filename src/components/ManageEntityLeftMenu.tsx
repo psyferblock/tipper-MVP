@@ -10,6 +10,9 @@ export default function ManageEntityMenu() {
           <div className="text-black hover:bg-gray-100 px-6 py-2">
             Inventory
           </div>
+          <div className="text-black hover:bg-gray-100 px-6 py-2">
+            Exchange Rate
+          </div>
           <div className="text-black hover:bg-gray-100 px-6 py-2">Contact</div>
           <div className="text-black hover:bg-gray-100 px-6 py-2">About Us</div>
         </div>
