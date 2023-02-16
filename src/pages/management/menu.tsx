@@ -1,29 +1,26 @@
+import AddNewItemModal from "@/components/AddNewItemModal";
+import AddNewMenuCategoryModal from "@/components/AddNewMenuCategoryModal";
+import EditMenuCategoryModal from "@/components/EditMenuCategoryModal";
 import ManageEntityMenu from "@/components/ManageEntityLeftMenu";
+import MenuCategoryCard from "@/components/MenuCategoryCard";
+import SearchBar from "@/components/SearchBar";
 import ToggleButton from "@/components/ToggleButton";
 
-const searchIcon = (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 24 24"
-    strokeWidth={1.5}
-    stroke="currentColor"
-    className="w-6 h-6"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-    />
-  </svg>
-);
-
 export default function Home() {
+  // const [categoryNames[], setCategoryNames] = useState([
+  //   "Breakfast",
+  //   "Entry",
+  //   "Main",
+  //   "Desert",
+  //   "Drinks",
+  //   "Offers",
+  // ]);
+
   return (
     <>
       {/* PAGE BG COLOR AND PADDING  */}
       <div className="font-bold text-2xl pt-6 pb-4">Manage Entity</div>
-      <div className="flex">
+      <div className="flex space-x-4">
         {/* LEFT MENU */}
         <ManageEntityMenu />
         {/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
@@ -34,30 +31,34 @@ export default function Home() {
               <p className="text-lg font-bold">Menu</p>
               <div className="flex pt-1 space-x-1">
                 <ToggleButton />
-                <p className="text-xs mt-0.5">Upload your menu as a PDF</p>
+                <p className="text-xs mt-0.5 ">Upload your menu as a PDF</p>
               </div>
             </div>
 
             {/* ADD CATEGORY BUTTON */}
-            <button className="w-32 h-10 hover:bg-blue-600 text-xs rounded-3xl bg-blue-500 text-white">
+            <button className="w-32 h-10 hover:bg-blue-600 text-xs rounded-3xl bg-blue-500 text-white -mt-2">
               Add Category
             </button>
           </div>
           {/* SEARCH CATEGORY SEARCH BAR */}
-          <input
-            type="text"
-            name="search category"
-            id="search category"
-            className="h-12 block w-full rounded-md border-gray-300 pl-4 pr-12  focus:border-indigo-500 focus:ring-indigo-500 text-xs "
-            placeholder="&#xF002;      Search category"
-            style={{ fontFamily: "Arial, FontAwesome" }}
-          />
+          <SearchBar />
+
           <div>
             {/* MENU CATEGORIES */}
-            <div className="grid grid-cols-4 gap-4"></div>
+            <div className="grid grid-cols-4 gap-4">
+              <MenuCategoryCard type="Breakfast" />
+              <MenuCategoryCard type="Entry" />
+              <MenuCategoryCard type="Main" />
+              <MenuCategoryCard type="Desert" />
+              <MenuCategoryCard type="Drinks" />
+              <MenuCategoryCard type="Offers" />
+            </div>
           </div>
         </div>
       </div>
+      {/* <EditMenuCategoryModal /> */}
+      {/* <AddNewMenuCategoryModal /> */}
+      <AddNewItemModal />
     </>
   );
 }

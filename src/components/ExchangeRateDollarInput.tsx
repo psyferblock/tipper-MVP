@@ -23,8 +23,8 @@ export default function Example() {
           type="text"
           name="price"
           id="price"
-          className="block w-full rounded-md border-gray-300 pl-7 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          placeholder="0.00"
+          className="pointer-events:none block w-full rounded-md border-gray-300 pl-7 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+          placeholder="1.00"
         />
         <div className="absolute inset-y-0 right-0 flex items-center">
           <label htmlFor="currency" className="sr-only">

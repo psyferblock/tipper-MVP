@@ -1,6 +1,7 @@
 import ExchangeRateDollarInput from "@/components/ExchangeRateDollarInput";
 import ExchangeRateLiraInput from "@/components/ExchangeRateLiraInput";
 import ManageEntityMenu from "@/components/ManageEntityLeftMenu";
+import SearchBar from "@/components/SearchBar";
 
 export default function Home() {
   return (
@@ -42,6 +43,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <SearchBar />
       </div>
     </>
   );

@@ -1,5 +1,5 @@
 // "use client";
-import AddHighlightModal from "../../components/AddHighlightModal";
+import AddHighlightModal from "../../components/AddNewHighlightModal";
 import ExchangeRateDollarInput from "../../components/ExchangeRateDollarInput";
 import ExchangeRateLiraInput from "../../components/ExchangeRateLiraInput";
 import ManageEntityMenu from "@/components/ManageEntityLeftMenu";
