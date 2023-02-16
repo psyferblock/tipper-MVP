@@ -38,32 +38,60 @@ export default function Example() {
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
               <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 w-full sm:max-w-lg">
-                <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 w-max">
-                  <div className="sm:flex sm:items-start w-max">
+                <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                  <div className="sm:flex sm:items-start w-full">
                     <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                       <Dialog.Title
                         as="h3"
                         className="text-lg font-medium leading-6 text-gray-900 mb-4"
                       >
-                        Add New Highlight
+                        Add New Item
                       </Dialog.Title>
-
+                      {/* ITEM NAME */}
                       <div className="flex justify-between text-xs">
-                        <p>Highlight Name</p>
+                        <p>Item Name</p>
                         <p className="text-gray-400">150</p>
                       </div>
-                      {/* TAG INPUT FIELD */}
+                      {/* ITEM NAME INPUT FIELD */}
                       <input
                         type="text"
-                        name="tags"
-                        id="price"
-                        className="h-12 block w-full rounded-md border-gray-300 pl-4 pr-[235px] mt-2 mb-6 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                        placeholder="Type highlight name"
+                        id="item name"
+                        className="h-12 block w-full rounded-md border-gray-300 pl-4 pr-[235px] mt-1 mb-4 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        placeholder="Item name"
                       />
-                      <div className="flex space-x-4 w-full">
-                        {/* ADD HIGHLIGHT CONTAINER */}
-                        <div className="bg-gray-100 w-full flex justify-center rounded-md border-2 border-dashed border-gray-400 px-6 pt-[52px] ">
-                          <div className="space-y-1 text-center pb-9">
+                      {/* ITEM DESCRIPTION */}
+                      <div className="flex justify-between text-xs">
+                        <p>Item Description</p>
+                        <p className="text-gray-400">150</p>
+                      </div>
+                      {/* DESCRIPTION INPUT FIELD */}
+                      <input
+                        type="text"
+                        id="item description"
+                        className="h-12 block w-full rounded-md border-gray-300 pl-4 pr-12 mt-1 mb-4 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        placeholder="Description"
+                      />
+                      {/* PRICE */}
+                      <div className="flex justify-between text-xs pb-1">
+                        <p>Price</p>
+                        <p className="text-gray-400">150</p>
+                      </div>
+                      {/* PRICE INPUT FIELD */}
+                      <div className="flex items-center border rounded-lg h-12 border-gray-300 pl-4 mb-4">
+                        <p className="text-gray-500 pr-4">USD</p>
+                        <input
+                          type="text"
+                          id="price"
+                          className="h-12 block w-full  border border-gray-300 pl-4 pr-12 my-0.5 py-0 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                          placeholder="0.00"
+                        />
+                      </div>
+                      {/* IMAGE */}
+                      <div className="w-full">
+                        <p className="text-xs">Image</p>
+                        {/* IMAGE CONTAINER */}
+                        <div className="bg-gray-100 mt-1 w-full flex justify-center rounded-md border-2 border-dashed border-gray-400 px-6 pt-[52px] ">
+                          <div className="space-y-1 text-center">
                             <svg
                               className="mx-auto h-12 w-12 text-gray-400"
                               stroke="currentColor"
@@ -100,48 +128,28 @@ export default function Example() {
                             </p>
                           </div>
                         </div>
-                        {/* ADD HIGHLIGHT PLUS SIGN CONTAINER */}
-                        <div className="bg-gray-100 w-full flex justify-center rounded-md border-2 border-dashed border-gray-400 px-6 pt-[52px] ">
-                          <button className="pb-12">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              strokeWidth={3}
-                              stroke="currentColor"
-                              className="w-10 h-10 text-indigo-600 mx-auto"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M12 4.5v15m7.5-7.5h-15"
-                              />
-                            </svg>
-                            <p className="text-xs text-indigo-600 font-semibold">
-                              Add new highlight
-                            </p>
-                          </button>
-                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-                  <button
-                    type="button"
-                    className="inline-flex w-full justify-center rounded-3xl border border-transparent bg-blue-500 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
-                    onClick={() => setOpen(false)}
-                  >
-                    Add
-                  </button>
-                  <button
-                    type="button"
-                    className="mt-3 inline-flex w-full justify-center rounded-3xl border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
-                    onClick={() => setOpen(false)}
-                    ref={cancelButtonRef}
-                  >
-                    Cancel
-                  </button>
+                <div className="bg-gray-50 px-4 py-3 flex justify-end items-center sm:px-6">
+                  <div>
+                    <button
+                      type="button"
+                      className="mt-3 inline-flex w-full justify-center rounded-3xl border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+                      onClick={() => setOpen(false)}
+                      ref={cancelButtonRef}
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      type="button"
+                      className="inline-flex w-full justify-center rounded-3xl border border-transparent bg-blue-500 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
+                      onClick={() => setOpen(false)}
+                    >
+                      Save
+                    </button>
+                  </div>
                 </div>
               </Dialog.Panel>
             </Transition.Child>

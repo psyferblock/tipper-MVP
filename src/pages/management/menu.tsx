@@ -1,5 +1,6 @@
 import AddNewItemModal from "@/components/AddNewItemModal";
 import AddNewMenuCategoryModal from "@/components/AddNewMenuCategoryModal";
+import EditItemModal from "@/components/EditItemModal";
 import EditMenuCategoryModal from "@/components/EditMenuCategoryModal";
 import ManageEntityMenu from "@/components/ManageEntityLeftMenu";
 import MenuCategoryCard from "@/components/MenuCategoryCard";
@@ -28,8 +29,7 @@ export default function Home() {
           {/* MENU HEADER AND ADD CATEGORY BUTTON */}
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-6">
-              <p className="text-lg font-bold">Menu</p>
-              <div className="flex pt-1 space-x-1">
+              <div className="flex pt-1 space-x-2">
                 <ToggleButton />
                 <p className="text-xs mt-0.5 ">Upload your menu as a PDF</p>
               </div>
@@ -58,7 +58,8 @@ export default function Home() {
       </div>
       {/* <EditMenuCategoryModal /> */}
       {/* <AddNewMenuCategoryModal /> */}
-      <AddNewItemModal />
+      {/* <AddNewItemModal /> */}
+      <EditItemModal />
     </>
   );
 }
