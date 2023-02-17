@@ -5,27 +5,79 @@ export default function Home() {
         {/* ENTITY TAGS DIV */}
         <div>
           <p>Entity Tags</p>
-          <div className="px-1 flex flex-wrap items-center space-y-2 space-x-2">
-            <div className="w-fit  flex bg-gray-200 rounded-xl text-black text-xs px-4 py-1 drop-shadow-lg">
-              <p>Homemade</p>
-            </div>
-            <div className="w-fit  flex bg-gray-200 rounded-xl text-black text-xs px-4 py-1 drop-shadow-lg">
-              <p>Lebanese</p>
-            </div>
-            <div className="w-fit  flex bg-gray-200 rounded-xl text-black text-xs px-4 py-1 drop-shadow-lg">
-              <p>Mouneh</p>
-            </div>
-            <div className="w-fit  flex bg-gray-200 rounded-xl text-black text-xs px-4 py-1 drop-shadow-lg">
-              <p>Vegetarian</p>
-            </div>
+          <div className="grid grid-rows-2 grid-flow-col gap-2 pb-3 pt-2 overflow-auto">
+            <p className="w-fit  mr-3 flex bg-gray-200 rounded-xl text-black text-xs px-4 py-1 drop-shadow-sm">
+              Homemade
+            </p>
+
+            <p className="w-fit mr-3 flex bg-gray-200 rounded-xl text-black text-xs px-4 py-1 drop-shadow-sm">
+              Lebanese
+            </p>
+
+            <p className="w-fit  mr-3 flex bg-gray-200 rounded-xl text-black text-xs px-4 py-1 drop-shadow-sm">
+              Mouneh
+            </p>
+            <p className="w-fit mr-3 flex bg-gray-200 rounded-xl text-black text-xs px-4 py-1 drop-shadow-sm">
+              Vegetarian
+            </p>
+            <p className="w-fit  mr-3 flex bg-gray-200 rounded-xl text-black text-xs px-4 py-1 drop-shadow-sm">
+              Vegetarian
+            </p>
+            <p className="w-fit  mr-3 flex bg-gray-200 rounded-xl text-black text-xs px-4 py-1 drop-shadow-sm">
+              Vegetarian
+            </p>
+            <p className="w-fit  mr-3 flex bg-gray-200 rounded-xl text-black text-xs px-4 py-1 drop-shadow-sm">
+              Vegetarian
+            </p>
+          </div>
+          {/* LEFT RIGHT NAVIGATION BUTTON */}
+          <div className="flex justify-end space-x-1 pr-1">
+            <button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M11.25 9l-3 3m0 0l3 3m-3-3h7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </button>
+            <button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </button>
           </div>
         </div>
         {/* OPENING HOURS DIV */}
         <div>
-          <p className="pb-0.5">Opening Hours</p>
+          <p className="pb-0.5 -mt-5">Opening Hours</p>
           <div className="px-1 divide-y">
-            <p className="font-normal text-xs">Monday-Friday</p>
-            <p className="font-normal text-xs">Saturday-Sunday</p>
+            <div className="flex justify-between">
+              <p className="font-normal text-xs">Monday-Friday</p>
+              <p className="font-normal text-xs">8:00A.M-10:00P.M</p>
+            </div>
+            <div className="flex justify-between">
+              <p className="font-normal text-xs">Saturday-Sunday</p>
+              <p className="font-normal text-xs">8:00A.M-5:00P.M</p>
+            </div>
           </div>
         </div>
         {/* ADDRESS DIV */}
