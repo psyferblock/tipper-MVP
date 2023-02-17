@@ -6,7 +6,7 @@ import ManageEntityMenu from "@/components/ManageEntityLeftMenu";
 import ToggleButton from "../../components/ToggleButton";
 import GenerateQrCodeSection from "@/components/GenerateQrCodeSection";
 import ManageSocialMedia from "@/components/ManageSocialMedia";
-import ManageWorkingHours from "@/components/ManageWorkingHours";
+import ManageWorkingHours from "@/components/working hours section/ManageWorkingHours";
 
 export default function Home() {
   return (
@@ -96,7 +96,7 @@ export default function Home() {
               type="text"
               name="tags"
               id="price"
-              className="h-12 block w-full rounded-md border-gray-300 pl-7 pr-12 mt-2 mb-6 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+              className="h-12 block w-full rounded-md border-gray-400 pl-7 pr-12 mt-2 mb-6 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               placeholder="Type tag here"
             />
             {/* TAGS ROW */}

@@ -30,7 +30,7 @@ export default function Home() {
               type="text"
               name="tags"
               id="price"
-              className="h-12 block w-3/4 rounded-md border-gray-300 pl-7 pr-12  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+              className="h-12 block w-3/4 rounded-md border-gray-400 pl-7 pr-12  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               placeholder="03 456 789"
             />
           </div>
@@ -67,7 +67,7 @@ export default function Home() {
               type="text"
               name="tags"
               id="price"
-              className="h-12 block w-3/4 rounded-md border-gray-300 pl-7 pr-12  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+              className="h-12 block w-3/4 rounded-md border-gray-400 pl-7 pr-12  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               placeholder="Email Address"
             />
           </div>
@@ -100,7 +100,7 @@ export default function Home() {
               type="text"
               name="tags"
               id="price"
-              className="h-12 block w-3/4 rounded-md border-gray-300 pl-7 pr-12  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+              className="h-12 block w-3/4 rounded-md border-gray-400 pl-7 pr-12  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               placeholder="Link"
             />
           </div>
@@ -133,7 +133,7 @@ export default function Home() {
               type="text"
               name="tags"
               id="price"
-              className="h-12 block w-3/4 rounded-md border-gray-300 pl-7 pr-12  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+              className="h-12 block w-3/4 rounded-md border-gray-400 pl-7 pr-12  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               placeholder="Link"
             />
           </div>
@@ -166,7 +166,7 @@ export default function Home() {
               type="text"
               name="tags"
               id="price"
-              className="h-12 block w-3/4 rounded-md border-gray-300 pl-7 pr-12  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+              className="h-12 block w-3/4 rounded-md border-gray-400 pl-7 pr-12  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               placeholder="Whatsapp Number"
             />
           </div>
@@ -199,7 +199,7 @@ export default function Home() {
               type="text"
               name="tags"
               id="price"
-              className="h-12 block w-3/4 rounded-md border-gray-300 pl-7 pr-12  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+              className="h-12 block w-3/4 rounded-md border-gray-400 pl-7 pr-12  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               placeholder="Link"
             />
           </div>
