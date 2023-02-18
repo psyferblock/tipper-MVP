@@ -7,6 +7,8 @@ import ToggleButton from "../../components/ToggleButton";
 import GenerateQrCodeSection from "@/components/GenerateQrCodeSection";
 import ManageSocialMedia from "@/components/ManageSocialMedia";
 import ManageWorkingHours from "@/components/working hours section/ManageWorkingHours";
+import ManageAboutUs from "@/components/ManageAboutUs";
+import ManageContactUs from "@/components/ManageContactUs";
 
 export default function Home() {
   return (
@@ -43,7 +45,10 @@ export default function Home() {
               </div>
             </div>
             {/* "Caption Goes here" */}
-            <div className="text-xs">Caption goes here</div>
+            <div className="text-xs">
+              Add up to 5 photos that will appear as a slideshow at the top of
+              your entity page
+            </div>
             {/* UPLOAD PICTURE FIELD */}
             <div className="bg-gray-100  h-56 rounded-lg border-2 border-dashed border-gray-400 my-4 ">
               <div className=" flex justify-center rounded-md px-6 pt-[52px] ">
@@ -102,9 +107,9 @@ export default function Home() {
             {/* TAGS ROW */}
             <div className="flex space-x-3">
               {/* TAG 1 */}
-              <div className="w-1/12">
-                <div className="flex items-center justify-between bg-gray-100 rounded-lg text-black text-xs px-2 py-1 drop-shadow-lg">
-                  <div>Tag 1</div>
+              <div className="flex w-fit items-center space-x-3 justify-between bg-gray-100 rounded-lg text-black text-xs px-2 py-1 drop-shadow-lg">
+                <p>Vegeterian</p>
+                <button>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -119,12 +124,13 @@ export default function Home() {
                       d="M6 18L18 6M6 6l12 12"
                     />
                   </svg>
-                </div>
+                </button>
               </div>
               {/* TAG 2 */}
-              <div className="w-1/12">
-                <div className="flex items-center justify-between bg-gray-100 rounded-lg text-black text-xs px-2 py-1 drop-shadow-lg">
-                  <div>Tag 2</div>
+
+              <div className="flex w-fit items-center justify-between space-x-3 bg-gray-100 rounded-lg text-black text-xs px-2 py-1 drop-shadow-lg">
+                <div>Cozy</div>
+                <button>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -139,12 +145,13 @@ export default function Home() {
                       d="M6 18L18 6M6 6l12 12"
                     />
                   </svg>
-                </div>
+                </button>
               </div>
               {/* TAG 3 */}
-              <div className="w-1/12">
-                <div className="flex items-center justify-between bg-gray-100 rounded-lg text-black text-xs px-2 py-1 drop-shadow-lg">
-                  <div>Tag 3</div>
+
+              <div className="flex w-fit items-center justify-between space-x-3 bg-gray-100 rounded-lg text-black text-xs px-2 py-1 drop-shadow-lg">
+                <div>Seafood</div>
+                <button>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -159,7 +166,7 @@ export default function Home() {
                       d="M6 18L18 6M6 6l12 12"
                     />
                   </svg>
-                </div>
+                </button>
               </div>
             </div>
           </div>
@@ -167,10 +174,9 @@ export default function Home() {
           {/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
           <ManageWorkingHours />
           <ManageSocialMedia />
-
+          <ManageAboutUs />
+          <ManageContactUs />
           {/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
-
-          <GenerateQrCodeSection />
         </div>
       </div>
     </>
