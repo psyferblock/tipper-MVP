@@ -19,6 +19,9 @@ export default function ManageEntityMenu() {
           <button className="text-black hover:bg-gray-100 px-6 py-2 flex justify-start">
             Exchange Rate
           </button>
+          <button className="text-black hover:bg-gray-100 px-6 py-2 flex justify-start">
+            QR Code
+          </button>
         </div>
       </div>
     </>

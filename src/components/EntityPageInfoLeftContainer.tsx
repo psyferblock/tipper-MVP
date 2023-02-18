@@ -21,13 +21,13 @@ export default function Home() {
               Vegetarian
             </p>
             <p className="w-fit  mr-3 flex bg-gray-200 rounded-xl text-black text-xs px-4 py-1 drop-shadow-sm">
-              Vegetarian
+              Labneh
             </p>
             <p className="w-fit  mr-3 flex bg-gray-200 rounded-xl text-black text-xs px-4 py-1 drop-shadow-sm">
-              Vegetarian
+              Cheese
             </p>
             <p className="w-fit  mr-3 flex bg-gray-200 rounded-xl text-black text-xs px-4 py-1 drop-shadow-sm">
-              Vegetarian
+              Mouhamara
             </p>
           </div>
           {/* LEFT RIGHT NAVIGATION BUTTON */}

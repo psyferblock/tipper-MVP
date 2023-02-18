@@ -77,12 +77,14 @@ export default function Example() {
                         <p className="text-gray-400">150</p>
                       </div>
                       {/* PRICE INPUT FIELD */}
-                      <div className="flex items-center border rounded-lg h-12 border-gray-300 pl-4 mb-4">
-                        <p className="text-gray-500 pr-4">USD</p>
+                      <div className="flex py-4 items-center border border-gray-300 hover:border-indigo-500 hover:border-2 rounded-lg h-12 pl-4 mb-4">
+                        <p className="h-12 pt-3 text-gray-500 pr-4 border-r border-gray-300">
+                          USD
+                        </p>
                         <input
                           type="text"
                           id="price"
-                          className="h-12 block w-full  border border-gray-300 pl-4 pr-12 my-0.5 py-0 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                          className="h-6 block w-full border-0 pl-4 pr-12 my-0.5 py-0 focus:border-0 focus:ring-0 sm:text-sm"
                           placeholder="0.00"
                         />
                       </div>

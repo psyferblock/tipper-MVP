@@ -4,11 +4,11 @@ export default function Home() {
   return (
     <div className="h-fit  bg-white rounded-lg p-4 drop-shadow-lg space-y-4">
       <div className="flex items-center space-x-6">
-        <div className="text-lg font-bold mb-2">Contact Us</div>
+        <div className="text-lg font-bold mb-1">About Us</div>
         <div className="flex pb-1 space-x-1">
           <ToggleButton />
           <p className="text-xs mt-0.5">
-            Show "Contact Us" section on your entity's public page
+            Show "About Us" section on your entity's public page
           </p>
         </div>
       </div>
@@ -16,13 +16,13 @@ export default function Home() {
         <label htmlFor="about us" className="text-xs text-gray-600 font-medium">
           Brief Description
         </label>
-        {/* CONTACT US INPUT FIELD */}
+        {/* ABOUT US INPUT FIELD */}
         <input
           type="text"
           name="about us"
           id="about us"
           className="h-32 block w-full rounded-md border-gray-300 pb-24 pl-4 pr-12 mt-1 focus:border-indigo-500 focus:ring-indigo-500 text-xs sm:text-sm"
-          placeholder="Enter a description of products people can order by contacting you."
+          placeholder="Enter a description of your wonderful business and people operating it!"
         />
       </div>
       <div>

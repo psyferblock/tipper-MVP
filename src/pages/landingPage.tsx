@@ -1,4 +1,5 @@
 import EntityCard from "@/components/EntityCard";
+import EntitiesCardsRow from "@/components/landing page/EntitiesCardsRow";
 
 export default function Home() {
   return (
@@ -26,12 +27,13 @@ export default function Home() {
       </div>
       {/* LISTING OF ENTITIES */}
       <div className="py-10 space-y-5 bg-white">
+        {/* /////////////////////////////////////////////////////////////////////////////////// */}
         {/* MOST POPULAR ENTITIES */}
         <div>
           {/* HEADER AND VIEW ALL BUTTON */}
+          {/* NOT ABSTRACTING THIS DIV IN THE ROW COMPONENT BECAUSE THE ML-400PX VARIES BETWEEN THIS DIV AND SERVICE INDUSTRY DIV */}
           <div className="flex items-center justify-between pb-4">
-            <div></div>
-            <p className="font-bold text-lg pl-32">
+            <p className="font-bold text-lg ml-[480px]">
               👑 Most Popular Entities 👑
             </p>
             <a
@@ -55,21 +57,16 @@ export default function Home() {
               </svg>
             </a>
           </div>
-          <div className="grid grid-rows-1 grid-flow-col gap-5 pb-5 overflow-x-auto">
-            <EntityCard />
-            <EntityCard />
-            <EntityCard />
-            <EntityCard />
-            <EntityCard />
-            <EntityCard />
-          </div>
+          <EntitiesCardsRow />
         </div>
+        {/* /////////////////////////////////////////////////////////////////////////////////// */}
+
         {/* SERVICE INDUSTRY */}
         <div>
           {/* HEADER AND VIEW ALL BUTTON */}
           <div className="pb-4">
-            <div className="flex items-center">
-              <p className="flex text-center font-bold text-lg ">
+            <div className="flex items-center justify-between ">
+              <p className="flex font-bold text-lg ml-[519px]">
                 Service Industry
               </p>
               <div>
@@ -96,14 +93,78 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="grid grid-rows-1 grid-flow-col gap-5 pb-5 overflow-x-auto">
-            <EntityCard />
-            <EntityCard />
-            <EntityCard />
-            <EntityCard />
-            <EntityCard />
-            <EntityCard />
+          <EntitiesCardsRow />
+        </div>
+        {/* /////////////////////////////////////////////////////////////////////////////////// */}
+
+        {/* ART AND ENTERTAINMENT INDUSTRY */}
+        <div>
+          {/* HEADER AND VIEW ALL BUTTON */}
+          <div className="pb-4">
+            <div className="flex items-center justify-between ">
+              <p className="flex font-bold text-lg ml-[500px]">
+                Art & Entertainment
+              </p>
+              <div>
+                <a
+                  className="text-sm text-blue-500 flex items-center space-x-1"
+                  href=""
+                >
+                  View Entities
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2.5}
+                    stroke="currentColor"
+                    className="w-5 h-5 text-blue-500 pt-0.5"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
           </div>
+          <EntitiesCardsRow />
+        </div>
+
+        {/* /////////////////////////////////////////////////////////////////////////////////// */}
+
+        {/* NON PROFIT INDUSTRY */}
+        <div>
+          {/* HEADER AND VIEW ALL BUTTON */}
+          <div className="pb-4">
+            <div className="flex items-center justify-between ">
+              <p className="flex font-bold text-lg ml-[543px]">Non-Profit</p>
+              <div>
+                <a
+                  className="text-sm text-blue-500 flex items-center space-x-1"
+                  href=""
+                >
+                  View Entities
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2.5}
+                    stroke="currentColor"
+                    className="w-5 h-5 text-blue-500 pt-0.5"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <EntitiesCardsRow />
         </div>
       </div>
     </>

@@ -1,3 +1,5 @@
+import AboutUsSection from "@/components/AboutUsSection";
+import ContactUsSection from "@/components/ContactUsSection";
 import EntityPageInfoLeftContainer from "@/components/EntityPageInfoLeftContainer";
 import MenuItemCard from "@/components/MenuItemCard";
 import MenuNavigation from "@/components/MenuNavigation";
@@ -77,12 +79,12 @@ export default function Home() {
       {/* ////////////////////////////////////////////////////////////////////////////////////////////// */}
 
       {/* GET IN TOUCH WITH US SECTION */}
-      <div></div>
+      <ContactUsSection />
 
       {/* ////////////////////////////////////////////////////////////////////////////////////////////// */}
 
       {/* ABOUT US SECTION */}
-      <div></div>
+      <AboutUsSection />
     </>
   );
 }
