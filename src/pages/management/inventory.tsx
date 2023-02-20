@@ -2,7 +2,7 @@ import AddNewItemModal from "@/components/AddNewItemModal";
 import AddNewMenuCategoryModal from "@/components/AddNewMenuCategoryModal";
 import EditItemModal from "@/components/EditItemModal";
 import EditMenuCategoryModal from "@/components/EditMenuCategoryModal";
-import ManageEntityMenu from "@/components/ManageEntityLeftMenu";
+import ManageEntityMenu from "@/components/manage/ManageEntityLeftMenu";
 import MenuCategoryCard from "@/components/MenuCategoryCard";
 import SearchBar from "@/components/SearchBar";
 import ToggleButton from "@/components/ToggleButton";
@@ -34,7 +34,7 @@ export default function Home() {
             </button>
           </div>
           {/* SEARCH CATEGORY SEARCH BAR */}
-          <SearchBar />
+          <SearchBar placeHolder="Seach for a category" />
 
           <div>
             {/* MENU CATEGORIES */}

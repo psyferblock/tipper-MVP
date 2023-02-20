@@ -14,7 +14,7 @@ export default function Home() {
                 the heavens and then all the kingdom
               </p>
             </div>
-            <button className="w-40 h-10 rounded-3xl bg-blue-500 text-white text-sm">
+            <button className="w-40 h-10 rounded-3xl bg-blue-500 text-white text-sm hover:text-lg">
               Create Now
             </button>
           </div>

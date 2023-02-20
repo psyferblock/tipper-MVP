@@ -2,13 +2,13 @@
 import AddHighlightModal from "../../components/AddNewHighlightModal";
 import ExchangeRateDollarInput from "../../components/ExchangeRateDollarInput";
 import ExchangeRateLiraInput from "../../components/ExchangeRateLiraInput";
-import ManageEntityMenu from "@/components/ManageEntityLeftMenu";
+import ManageEntityMenu from "@/components/manage/ManageEntityLeftMenu";
 import ToggleButton from "../../components/ToggleButton";
 import GenerateQrCodeSection from "@/components/GenerateQrCodeSection";
-import ManageSocialMedia from "@/components/ManageSocialMedia";
-import ManageWorkingHours from "@/components/working hours section/ManageWorkingHours";
-import ManageAboutUs from "@/components/ManageAboutUs";
-import ManageContactUs from "@/components/ManageContactUs";
+import ManageSocialMedia from "@/components/manage/ManageSocialMedia";
+import ManageWorkingHours from "@/components/manage/ManageWorkingHours";
+import ManageAboutUs from "@/components/manage/ManageAboutUs";
+import ManageContactUs from "@/components/manage/ManageContactUs";
 
 export default function Home() {
   return (
@@ -21,12 +21,12 @@ export default function Home() {
 
         {/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
-        <div className="flex flex-col space-y-5 w-full">
+        <div className="flex flex-col space-y-5 w-full pb-10">
           {/* ANNOUNCEMENT BANNERS CONTAINER */}
           <div className="h-fit  bg-white rounded-lg p-4 drop-shadow-lg">
             <div className="flex ">
               <div className="text-lg font-bold grow">Announcement Banners</div>
-              <div className="text-blue-500 flex items-center">
+              <button className="text-blue-500 flex items-center space-x-1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -41,8 +41,8 @@ export default function Home() {
                     d="M12 4.5v15m7.5-7.5h-15"
                   />
                 </svg>
-                <div>Add Slide</div>
-              </div>
+                Add Slide
+              </button>
             </div>
             {/* "Caption Goes here" */}
             <div className="text-xs">
@@ -177,6 +177,14 @@ export default function Home() {
           <ManageAboutUs />
           <ManageContactUs />
           {/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+          <div className="bg-gray-500 opacity-95 h-14 fixed bottom-0 left-0 right-0 py-2 px-12 flex justify-end space-x-5">
+            <button className="w-28 h-10 rounded-3xl bg-white border hover:bg-gray-200 border-gray-600 text-black text-sm ">
+              Cancel
+            </button>
+            <button className="w-28 h-10 rounded-3xl bg-blue-600 border hover:bg-blue-700 border-gray-600 text-black text-sm ">
+              Save
+            </button>
+          </div>
         </div>
       </div>
     </>

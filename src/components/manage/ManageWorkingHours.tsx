@@ -1,5 +1,5 @@
 import ToggleButton from "../ToggleButton";
-import WorkingHoursRow from "./WorkingHoursRow";
+import WorkingHoursRow from "../working hours section/WorkingHoursRow";
 
 export default function Home() {
   return (

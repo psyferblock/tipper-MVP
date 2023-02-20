@@ -1,5 +1,5 @@
-import AddNewHighlightModal from "./AddNewHighlightModal";
-import ToggleButton from "./ToggleButton";
+import AddNewHighlightModal from "../AddNewHighlightModal";
+import ToggleButton from "../ToggleButton";
 
 export default function Home() {
   return (
@@ -44,7 +44,7 @@ export default function Home() {
                   <ToggleButton />
                   <p className="pb-1">Yes</p>
                 </div>
-                <div className="flex items-center space-x-6 text-blue-600">
+                <div className="flex items-center space-x-10 text-blue-600">
                   <button>Edit</button>
                   <button>Remove</button>
                 </div>
@@ -58,7 +58,7 @@ export default function Home() {
                   <ToggleButton />
                   <p className="pb-1">No</p>
                 </div>
-                <div className="flex items-center space-x-6 text-blue-600">
+                <div className="flex items-center space-x-10 text-blue-600">
                   <button>Edit</button>
                   <button>Remove</button>
                 </div>
@@ -72,7 +72,7 @@ export default function Home() {
                   <ToggleButton />
                   <p className="pb-1">No</p>
                 </div>
-                <div className="flex items-center space-x-6 text-blue-600">
+                <div className="flex items-center space-x-10 text-blue-600">
                   <button>Edit</button>
                   <button>Remove</button>
                 </div>

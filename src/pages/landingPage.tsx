@@ -4,8 +4,19 @@ import EntitiesCardsRow from "@/components/landing page/EntitiesCardsRow";
 export default function Home() {
   return (
     <>
-      <div className="py-28">
-        <div className="w-7/12 mx-auto flex bg-white border border-gray-400 py-0 px-3 rounded-full overflow-hidden">
+      <div
+        className="py-32"
+        style={{
+          backgroundImage: `url(https://cdn.ldsliving.com/dims4/default/2040800/2147483647/strip/true/crop/640x395+0+0/resize/640x395!/format/webp/quality/90/?url=http%3A%2F%2Flds-living-brightspot.s3.amazonaws.com%2F7c%2F30%2F864e82a22a48241f8a28bc7abb4d%2F42088.jpg)`,
+        }}
+      >
+        {/* <img
+          className=" w-full h-full"
+          src="https://cdn.ldsliving.com/dims4/default/2040800/2147483647/strip/true/crop/640x395+0+0/resize/640x395!/format/webp/quality/90/?url=http%3A%2F%2Flds-living-brightspot.s3.amazonaws.com%2F7c%2F30%2F864e82a22a48241f8a28bc7abb4d%2F42088.jpg"
+          alt=""
+        /> */}
+        {/* SEARCH BAR */}
+        <div className="w-7/12 mx-auto flex bg-white border border-black py-0 px-3 rounded-full overflow-hidden">
           <div className="col-span-6 sm:col-span-3">
             <select
               id="sector"

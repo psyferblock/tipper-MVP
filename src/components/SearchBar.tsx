@@ -1,4 +1,4 @@
-export default function Home() {
+export default function Home(props) {
   return (
     <div className="w-full flex rounded-lg border-gray-400">
       <div className="pt-3">
@@ -16,7 +16,7 @@ export default function Home() {
       </div>
       <input
         type="text"
-        placeholder="Search category"
+        placeholder={`${props.placeHolder}`}
         className="pl-9 text-sm w-full border border-gray-400 h-12 rounded-md"
       />
     </div>

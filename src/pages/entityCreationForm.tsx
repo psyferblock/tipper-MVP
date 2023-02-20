@@ -82,18 +82,13 @@ export default function Home() {
                 Business Location*
               </label>
               {/* BUSINESS LOCATION FIELD */}
-              <select
-                name="business type"
-                id="business type"
+              <input
+                type="text"
+                name="names"
+                id="names"
                 className="h-12 block w-full rounded-md border-gray-300 pl-4 pr-12 mb-3 focus:border-indigo-500 focus:ring-indigo-500 text-xs sm:text-sm"
-                placeholder="Select a location"
-              >
-                <option>Beirut</option>
-                <option>Greater Beirut Area</option>
-                <option>Greater Universe Area</option>
-                <option>Grand Theft Auto Area</option>
-                <option>Ma khassak</option>
-              </select>
+                placeholder="Area, Street Name, Building number"
+              />
             </div>
             {/* BUSINESS OWNER NAME */}
             <div className="space-y-1 pt-4">

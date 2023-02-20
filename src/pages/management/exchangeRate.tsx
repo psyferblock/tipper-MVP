@@ -1,6 +1,6 @@
 import ExchangeRateDollarInput from "@/components/ExchangeRateDollarInput";
 import ExchangeRateLiraInput from "@/components/ExchangeRateLiraInput";
-import ManageEntityMenu from "@/components/ManageEntityLeftMenu";
+import ManageEntityMenu from "@/components/manage/ManageEntityLeftMenu";
 import SearchBar from "@/components/SearchBar";
 
 export default function Home() {
@@ -24,12 +24,12 @@ export default function Home() {
             </div>
             <div className="flex items-center space-x-6 pt-5">
               {/* PRICE INPUT FIELD */}
-              <div className="flex py-4 items-center border border-gray-300 hover:border-indigo-500 hover:border-2 rounded-lg h-12 pl-4 mb-4">
+              <div className="flex py-4 items-center border border-gray-300 hover:border-indigo-500 rounded-lg h-12 pl-4 mb-4">
                 <p className="h-12 pt-3 text-gray-500 pr-4 border-r border-gray-300">
                   LBP
                 </p>
                 <input
-                  type="text"
+                  type="number"
                   id="price"
                   className="h-6 block w-full border-0 pl-4 pr-12 my-0.5 py-0 focus:border-0 focus:ring-0 sm:text-sm"
                   placeholder="1506.00"
@@ -63,6 +63,9 @@ export default function Home() {
                   1.00
                 </p>
               </div>
+              <button className="text-blue-500 hover:text-indigo-700 pb-4">
+                Apply
+              </button>
             </div>
           </div>
         </div>

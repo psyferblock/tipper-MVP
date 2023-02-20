@@ -2,7 +2,7 @@ import ToggleButton from "./ToggleButton";
 
 export default function Home(props) {
   return (
-    <div className="h-[198px] w-full space-y-3 bg-white drop-shadow-lg rounded-md divide-y py-5 px-4 flex flex-col">
+    <div className="h-[198px] w-full space-y-3 bg-white drop-shadow-lg rounded-md divide-y py-5 px-4 flex flex-col hover:cursor-pointer">
       {/* UPPER PART OF CARD */}
       <div className="space-y-2">
         <div className="h-20 w-20 rounded-full mx-auto overflow-hidden">
