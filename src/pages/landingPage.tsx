@@ -36,9 +36,10 @@ export default function Home() {
           <button className="bg-blue-500 text-white px-7 -mr-3">Search</button>
         </div>
       </div>
+      {/* /////////////////////////////////////////////////////////////////////////////////// */}
+
       {/* LISTING OF ENTITIES */}
       <div className="py-10 space-y-5 bg-white">
-        {/* /////////////////////////////////////////////////////////////////////////////////// */}
         {/* MOST POPULAR ENTITIES */}
         <div>
           {/* HEADER AND VIEW ALL BUTTON */}

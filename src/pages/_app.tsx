@@ -18,10 +18,10 @@ function MyApp({
       supabaseClient={supabase}
       initialSession={pageProps.initialSession}
     >
-      <NavBar />
-      <div className="bg-gray-200 h-full px-12 py-8">
-        <Component {...pageProps} />
-      </div>
+      {/* <NavBar /> */}
+      {/* <div className="bg-gray-200 sm:min-h-screen sm:px-12 py-12 sm:py-8"> */}
+      <Component {...pageProps} />
+      {/* </div> */}
     </SessionContextProvider>
   );
 }
