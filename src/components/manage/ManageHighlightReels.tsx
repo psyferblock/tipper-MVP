@@ -1,4 +1,4 @@
-import AddNewHighlightModal from "../AddNewHighlightModal";
+import AddNewHighlightModal from "../modals/AddNewHighlightModal";
 import ToggleButton from "../ToggleButton";
 
 export default function Home() {

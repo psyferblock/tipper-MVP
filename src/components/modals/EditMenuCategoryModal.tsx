@@ -27,7 +27,7 @@ export default function Home() {
         </Transition.Child>
 
         <div className="fixed inset-0 z-10 ">
-          <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+          <div className="flex min-h-full items-end justify-center p-3 sm:p-4 text-center sm:items-center ">
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
@@ -43,12 +43,12 @@ export default function Home() {
                     <div className=" w-full mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                       <Dialog.Title
                         as="h3"
-                        className="text-lg font-medium leading-6 text-gray-900 mb-4"
+                        className="text-start text-lg font-medium leading-6 text-gray-900 mb-4"
                       >
                         Edit Category Name
                       </Dialog.Title>
 
-                      <div className="text-xs">Category Name</div>
+                      <div className="text-start text-xs">Category Name</div>
                       {/* TAG INPUT FIELD */}
                       <input
                         type="text"
@@ -63,7 +63,7 @@ export default function Home() {
                 <div className="bg-gray-50 px-4 py-3 flex justify-end sm:px-6">
                   <button
                     type="button"
-                    className="mt-3 inline-flex w-full justify-center rounded-3xl border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+                    className="mt-3 inline-flex justify-center rounded-3xl border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
                     onClick={() => setOpen(false)}
                     ref={cancelButtonRef}
                   >
@@ -71,7 +71,7 @@ export default function Home() {
                   </button>
                   <button
                     type="button"
-                    className="inline-flex w-full justify-center rounded-3xl border border-transparent bg-blue-500 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
+                    className="inline-flex justify-center rounded-3xl border border-transparent bg-blue-500 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
                     onClick={() => setOpen(false)}
                   >
                     Save

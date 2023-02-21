@@ -27,7 +27,7 @@ export default function Example() {
         </Transition.Child>
 
         <div className="fixed inset-0 z-10">
-          <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+          <div className="flex min-h-full items-end justify-center p=3 sm:p-4 text-center sm:items-center">
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
@@ -41,12 +41,30 @@ export default function Example() {
                 <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                   <div className="sm:flex sm:items-start w-full">
                     <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
-                      <Dialog.Title
-                        as="h3"
-                        className="text-lg font-medium leading-6 text-gray-900 mb-4"
-                      >
-                        Edit Item
-                      </Dialog.Title>
+                      <div className="flex items-center justify-between mb-5 sm:mb-0">
+                        <Dialog.Title
+                          as="h3"
+                          className="text-lg font-medium leading-6 text-gray-900 sm:mb-4"
+                        >
+                          Edit Item
+                        </Dialog.Title>
+                        <button className="sm:hidden">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            strokeWidth={1.5}
+                            stroke="currentColor"
+                            className="w-6 h-6 text-gray-600"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M6 18L18 6M6 6l12 12"
+                            />
+                          </svg>
+                        </button>
+                      </div>
                       {/* ITEM NAME */}
                       <div className="flex justify-between text-xs">
                         <p>Item Name</p>

@@ -2,9 +2,9 @@ import ToggleButton from "./ToggleButton";
 
 export default function Home(props) {
   return (
-    <div className="h-[198px] w-full space-y-3 bg-white drop-shadow-lg rounded-md divide-y py-5 px-4 flex flex-col hover:cursor-pointer">
+    <div className="h-fit sm:h-[198px] w-full space-y-3 bg-white drop-shadow-lg rounded-md sm:divide-y py-5 px-3 sm:px-4 flex sm:flex-col hover:cursor-pointer">
       {/* UPPER PART OF CARD */}
-      <div className="space-y-2">
+      <div className="sm:space-y-2">
         <div className="h-20 w-20 rounded-full mx-auto overflow-hidden">
           <img
             className=" h-24 w-24"
@@ -12,11 +12,25 @@ export default function Home(props) {
             alt=""
           />
         </div>
-        <p className="text-center font-semibold text-gray-700">{props.type}</p>
+        <p className="hidden sm:block text-center font-semibold text-gray-700">
+          {props.type}
+        </p>
       </div>
+      <div className="sm:hidden ml-2 space-y-2">
+        <p className="sm:hidden text-start mr-2 font-semibold text-gray-700">
+          {props.type}
+        </p>
+        <div className="text-sm flex text-start space-x-2 ">
+          <ToggleButton />
+          <p>Publish</p>
+        </div>
+      </div>
+      <button className="sm:hidden text-xs flex justify-end pl-0 text-blue-500 pt-1">
+        Edit Name
+      </button>
 
       {/* LOWER PART OF CARD */}
-      <div className="flex text-xs items-center justify-between pt-4">
+      <div className="hidden sm:flex text-xs items-center justify-between pt-4">
         <div className="flex space-x-2">
           <ToggleButton />
           <p>Publish</p>

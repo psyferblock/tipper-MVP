@@ -1,7 +1,7 @@
-import AddNewItemModal from "@/components/AddNewItemModal";
-import AddNewMenuCategoryModal from "@/components/AddNewMenuCategoryModal";
-import EditItemModal from "@/components/EditItemModal";
-import EditMenuCategoryModal from "@/components/EditMenuCategoryModal";
+import AddNewItemModal from "@/components/modals/AddNewItemModal";
+import AddNewMenuCategoryModal from "@/components/modals/AddNewMenuCategoryModal";
+import EditItemModal from "@/components/modals/EditItemModal";
+import EditMenuCategoryModal from "@/components/modals/EditMenuCategoryModal";
 import ManageEntityMenu from "@/components/manage/ManageEntityLeftMenu";
 import MenuCategoryCard from "@/components/MenuCategoryCard";
 import SearchBar from "@/components/SearchBar";
@@ -33,8 +33,8 @@ export default function Home() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-6">
               <div className="flex pt-1 space-x-2">
-                <ToggleButton />
                 <p className="text-xs mt-0.5 ">Upload your menu as a PDF</p>
+                <ToggleButton />
               </div>
             </div>
 
