@@ -2,14 +2,14 @@ import ToggleButton from "@/components/ToggleButton";
 
 export default function Home() {
   return (
-    <div className="h-fit  bg-white rounded-lg p-4 drop-shadow-lg space-y-4">
-      <div className="flex items-center space-x-6">
+    <div className="h-fit  bg-white rounded-lg p-3 sm:p-4 drop-shadow-lg space-y-4">
+      <div className="sm:flex items-center sm:space-x-6">
         <div className="text-lg font-bold mb-1">Contact Us</div>
-        <div className="flex pb-0.5 space-x-1">
+        <div className="flex items-center pb-0.5 space-x-1 sm:py-0 py-1">
           <div className="pt-0.5">
             <ToggleButton />
           </div>
-          <p className="text-xs mt-1">
+          <p className="text-xs sm:mt-0">
             Show "Contact Us" section on your entity's public page
           </p>
         </div>
