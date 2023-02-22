@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="bg-gray-300 sm:h-fit sm:min-h-screen px-4 sm:px-12 py-5 sm:py-8">
+      <div className="bg-gray-300 sm:h-fit sm:min-h-screen px-3 sm:px-12 py-5 sm:py-8">
         <div className="flex items-center justify-between pb-9">
           <p className=" font-semibold text-2xl ">Entity Name</p>
           <button className="sm:w-32 h-9 rounded-3xl sm:border-2 sm:border-gray-500 text-blue-500 sm:text-gray-500 text-xs">

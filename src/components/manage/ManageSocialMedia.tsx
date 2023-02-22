@@ -2,12 +2,12 @@ import ToggleButton from "../ToggleButton";
 
 export default function Home() {
   return (
-    <div className=" bg-white rounded-lg p-4 drop-shadow-lg">
+    <div className=" bg-white rounded-lg p-3 sm:p-4 drop-shadow-lg">
       <p className="text-lg font-bold mb-1">Phone Number & Social Media</p>
       <div className="divide-y">
         {/* PHONE NUMBER ROW */}
-        <div className="flex items-center justify-start py-5">
-          <div className="w-52 flex space-x-2">
+        <div className="sm:flex space-y-2 sm:space-y-0 items-center justify-start py-5">
+          <div className="sm:w-52 flex space-x-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -25,25 +25,25 @@ export default function Home() {
             <p>Phone Number</p>
           </div>
           {/* PHONE NUMBER INPUT FIELD */}
-          <div className="w-96">
+          <div className="sm:w-96">
             <input
               type="text"
               name="tags"
               id="price"
-              className="h-12 block w-3/4 rounded-md border-gray-400 pl-7 pr-12  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+              className="h-12 block sm:w-3/4 rounded-md border-gray-400 pl-7 pr-12  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               placeholder="03 456 789"
             />
           </div>
-          <div className="flex space-x-3 grow px-9">
+          <div className="flex space-x-2 sm:space-x-3 grow sm:px-9">
             <div className="mt-0.5">
               <ToggleButton />
             </div>
-            <p className=" text-sm text-gray-500">Show on your page</p>
+            <p className=" sm:text-sm text-gray-500">Show on your page</p>
           </div>
         </div>
         {/* EMAIL ADDRESS ROW */}
-        <div className="flex items-center justify-start py-5">
-          <div className="w-52 flex space-x-2">
+        <div className="sm:flex space-y-2 sm:space-y-0 items-center justify-start py-5">
+          <div className=" sm:w-52 flex space-x-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -62,25 +62,25 @@ export default function Home() {
             <p>Email Address</p>
           </div>
           {/* EMAIL ADDRESS INPUT FIELD */}
-          <div className="w-96">
+          <div className=" sm:w-96">
             <input
               type="text"
               name="tags"
               id="price"
-              className="h-12 block w-3/4 rounded-md border-gray-400 pl-7 pr-12  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+              className="h-12 block sm:w-3/4 rounded-md border-gray-400 pl-7 pr-12  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               placeholder="Email Address"
             />
           </div>
-          <div className="flex space-x-3 grow px-9">
+          <div className="flex space-x-2 sm:space-x-3 grow sm:px-9">
             <div className="mt-0.5">
               <ToggleButton />
             </div>
-            <p className=" text-sm text-gray-500">Show on your page</p>
+            <p className=" sm:text-sm text-gray-500">Show on your page</p>
           </div>
         </div>
         {/* INSTAGRAM ROW */}
-        <div className="flex items-center justify-start py-5">
-          <div className="w-52 flex space-x-2">
+        <div className="sm:flex space-y-2 sm:space-y-0 items-center justify-start py-5">
+          <div className=" sm:w-52 flex space-x-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512"
@@ -95,25 +95,25 @@ export default function Home() {
             <p>Instagram</p>
           </div>
           {/* INSTAGRAM INPUT FIELD */}
-          <div className="w-96">
+          <div className=" sm:w-96">
             <input
               type="text"
               name="tags"
               id="price"
-              className="h-12 block w-3/4 rounded-md border-gray-400 pl-7 pr-12  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+              className="h-12 block sm:w-3/4 rounded-md border-gray-400 pl-7 pr-12  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               placeholder="Link"
             />
           </div>
-          <div className="flex space-x-3 grow px-9">
+          <div className="flex space-x-2 sm:space-x-3 grow sm:px-9">
             <div className="mt-0.5">
               <ToggleButton />
             </div>
-            <p className=" text-sm text-gray-500">Show on your page</p>
+            <p className=" sm:text-sm text-gray-500">Show on your page</p>
           </div>
         </div>
         {/* FACEBOOK ROW */}
-        <div className="flex items-center justify-start py-5">
-          <div className="w-52 flex space-x-2">
+        <div className="sm:flex space-y-2 sm:space-y-0 items-center justify-start py-5">
+          <div className=" sm:w-52 flex space-x-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 320 512"
@@ -128,25 +128,25 @@ export default function Home() {
             <p>Facebook</p>
           </div>
           {/* FACEBOOK INPUT FIELD */}
-          <div className="w-96">
+          <div className=" sm:w-96">
             <input
               type="text"
               name="tags"
               id="price"
-              className="h-12 block w-3/4 rounded-md border-gray-400 pl-7 pr-12  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+              className="h-12 block sm:w-3/4 rounded-md border-gray-400 pl-7 pr-12  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               placeholder="Link"
             />
           </div>
-          <div className="flex space-x-3 grow px-9">
+          <div className="flex space-x-2 sm:space-x-3 grow sm:px-9">
             <div className="mt-0.5">
               <ToggleButton />
             </div>
-            <p className=" text-sm text-gray-500">Show on your page</p>
+            <p className=" sm:text-sm text-gray-500">Show on your page</p>
           </div>
         </div>
         {/* WHATSAPP ROW */}
-        <div className="flex items-center justify-start py-5">
-          <div className="w-52 flex space-x-2">
+        <div className="sm:flex space-y-2 sm:space-y-0 items-center justify-start py-5">
+          <div className=" sm:w-52 flex space-x-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512"
@@ -161,20 +161,20 @@ export default function Home() {
             <p>Whatsapp</p>
           </div>
           {/* WHATSAPP INPUT FIELD */}
-          <div className="w-96">
+          <div className=" sm:w-96">
             <input
               type="text"
               name="tags"
               id="price"
-              className="h-12 block w-3/4 rounded-md border-gray-400 pl-7 pr-12  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+              className="h-12 block sm:w-3/4 rounded-md border-gray-400 pl-7 pr-12  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               placeholder="Whatsapp Number"
             />
           </div>
-          <div className="flex space-x-3 grow px-9">
+          <div className="flex space-x-2 sm:space-x-3 grow sm:px-9">
             <div className="mt-0.5">
               <ToggleButton />
             </div>
-            <p className=" text-sm text-gray-500">Show on your page</p>
+            <p className="sm:text-sm text-gray-500">Show on your page</p>
           </div>
         </div>
       </div>

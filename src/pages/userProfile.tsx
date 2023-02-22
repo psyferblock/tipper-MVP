@@ -3,7 +3,7 @@ import Navbar from "@/components/NavBar";
 export default function Home() {
   return (
     <>
-      <div className="bg-gray-300 sm:h-fit sm:min-h-screen px-4 sm:px-12 py-5 sm:py-8">
+      <div className="bg-gray-300 sm:h-fit sm:min-h-screen px-3 sm:px-12 py-5 sm:py-8">
         <div className="space-y-8">
           <p className="pb-5 bg-gray-300 w-full top-0 z-50 fixed sm:relative sm:mb-8 text-2xl sm:text-2xl font-bold sm:font-bold">
             Profile

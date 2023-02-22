@@ -41,31 +41,49 @@ export default function Example() {
                 <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 w-max">
                   <div className="sm:flex sm:items-start w-max">
                     <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
-                      <Dialog.Title
-                        as="h3"
-                        className="text-lg font-medium leading-6 text-gray-900 mb-4"
-                      >
-                        Add New Highlight
-                      </Dialog.Title>
+                      <div className="flex items-center justify-between mb-2">
+                        <Dialog.Title
+                          as="h3"
+                          className="text-lg text-start  font-medium leading-6 text-gray-900 mb-4"
+                        >
+                          Add New Highlight
+                        </Dialog.Title>
+                        <button className="sm:hidden">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            strokeWidth={1.5}
+                            stroke="currentColor"
+                            className="w-6 h-6 mb-4 text-gray-600"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M6 18L18 6M6 6l12 12"
+                            />
+                          </svg>
+                        </button>
+                      </div>
 
                       <div className="flex justify-between text-xs">
                         <p>Highlight Name</p>
                         <p className="text-gray-400">150</p>
                       </div>
-                      {/* TAG INPUT FIELD */}
+                      {/* HIGHLIGHT NAME INPUT FIELD */}
                       <input
                         type="text"
                         name="tags"
                         id="price"
-                        className="h-12 block w-full rounded-md border-gray-300 pl-4 pr-[235px] mt-2 mb-6 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        className="h-14 w-full sm:h-12 block rounded-md border-gray-300 sm:pl-4 sm:pr-[235px] mt-2 mb-6 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                         placeholder="Type highlight name"
                       />
-                      <div className="flex space-x-4 w-full">
+                      <div className="flex space-x-4">
                         {/* ADD HIGHLIGHT CONTAINER */}
-                        <div className="bg-gray-100 w-full flex justify-center rounded-md border-2 border-dashed border-gray-400 px-6 pt-[52px] ">
-                          <div className="space-y-1 text-center pb-9">
+                        <div className="bg-gray-100 w-full flex justify-center rounded-md border-2 border-dashed border-gray-400 sm:px-6  sm:pt-[52px] ">
+                          <div className="space-y-1 text-center pt-24 sm:pt-0 pb-20 sm:pb-9">
                             <svg
-                              className="mx-auto h-12 w-12 text-gray-400"
+                              className="mx-auto h-10 w-10 sm:h-12 sm:w-12 text-gray-400"
                               stroke="currentColor"
                               fill="none"
                               viewBox="0 0 48 48"
@@ -101,7 +119,7 @@ export default function Example() {
                           </div>
                         </div>
                         {/* ADD HIGHLIGHT PLUS SIGN CONTAINER */}
-                        <div className="bg-gray-100 w-full flex justify-center rounded-md border-2 border-dashed border-gray-400 px-6 pt-[52px] ">
+                        <div className="bg-gray-100 w-full flex justify-center rounded-md border-2 border-dashed border-gray-400 sm:px-6 pt-[52px] ">
                           <button className="pb-12">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -126,17 +144,17 @@ export default function Example() {
                     </div>
                   </div>
                 </div>
-                <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                <div className="bg-gray-50 px-4 py-3 flex flex-row-reverse sm:flex sm:flex-row-reverse sm:px-6">
                   <button
                     type="button"
-                    className="inline-flex w-full justify-center rounded-3xl border border-transparent bg-blue-500 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
+                    className="inline-flex w-full ml-3 justify-center rounded-3xl border border-transparent bg-blue-500 px-7 py-2 sm:py-2 text-base font-medium text-white shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
                     onClick={() => setOpen(false)}
                   >
                     Add
                   </button>
                   <button
                     type="button"
-                    className="mt-3 inline-flex w-full justify-center rounded-3xl border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+                    className=" inline-flex w-full justify-center rounded-3xl border border-gray-300 bg-white px-8 py-2 sm:py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
                     onClick={() => setOpen(false)}
                     ref={cancelButtonRef}
                   >

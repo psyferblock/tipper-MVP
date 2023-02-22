@@ -34,7 +34,7 @@ export default function Home() {
           {/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
           <div className="flex flex-col space-y-3 sm:space-y-2 w-full">
             <div className="flex justify-between">
-              <div className="sm:hidden font-bold text-2xl">Menu</div>
+              <div className="sm:hidden font-bold text-2xl">Manage Menu</div>
               <div className="sm:hidden">
                 <DropdownManagement />
               </div>

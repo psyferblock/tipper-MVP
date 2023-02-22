@@ -32,7 +32,7 @@ export default function Home() {
             <tr>
               <th className="pr-96 pb-4">Highlight</th>
               <th className="pr-96 pb-4">Status</th>
-              <th className="pr-96 pb-4">Publish/Unpublish</th>
+              <th className=" pr-96 pb-4">Publish/Unpublish</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-300 text-gray-500">
@@ -52,7 +52,7 @@ export default function Home() {
             </tr>
             <tr>
               <td>Happy Customers</td>
-              <td className="italic">Private</td>
+              <td className=" italic">Private</td>
               <td className="flex items-center justify-between">
                 <div className="flex items-center space-x-2 py-3">
                   <ToggleButton />
@@ -66,7 +66,7 @@ export default function Home() {
             </tr>
             <tr>
               <td>Our offers</td>
-              <td className="italic">Private</td>
+              <td className=" italic">Private</td>
               <td className="flex items-center justify-between">
                 <div className="flex items-center space-x-2 py-3">
                   <ToggleButton />
