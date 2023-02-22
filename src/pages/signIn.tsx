@@ -1,6 +1,6 @@
 export default function SignIn() {
   return (
-    <div className="bg-gray-300 sm:h-fit sm:min-h-screen px-4 sm:px-12 py-5 sm:py-8">
+    <div className="bg-gray-300 sm:h-fit sm:min-h-screen px-3 sm:px-12 py-5 sm:py-8">
       <div className="sm:flex">
         {/* LEFT PART OF SCREEN */}
         <div className="sm:w-1/3 mb-10 sm:mb-0">
