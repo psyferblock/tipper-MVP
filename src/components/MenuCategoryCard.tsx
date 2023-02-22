@@ -16,21 +16,23 @@ export default function Home(props) {
           {props.type}
         </p>
       </div>
-      <div className="sm:hidden ml-2 space-y-2">
-        <p className="sm:hidden text-start mr-2 font-semibold text-gray-700">
-          {props.type}
-        </p>
-        <div className="text-sm flex text-start space-x-2 ">
-          <ToggleButton />
-          <p>Publish</p>
+      <div className="sm:hidden w-full flex justify-between">
+        <div className="sm:hidden ml-2 space-y-2">
+          <p className="sm:hidden text-start mr-2 font-semibold text-gray-700">
+            {props.type}
+          </p>
+          <div className="text-sm flex text-start space-x-2 ">
+            <ToggleButton />
+            <p>Publish</p>
+          </div>
         </div>
+        <button className="sm:hidden w-fit text-xs flex  text-blue-500 pt-1">
+          Edit Name
+        </button>
       </div>
-      <button className="sm:hidden text-xs flex justify-end pl-0 text-blue-500 pt-1">
-        Edit Name
-      </button>
 
       {/* LOWER PART OF CARD */}
-      <div className="hidden sm:flex text-xs items-center justify-between pt-4">
+      <div className="hidden sm:flex text-xs items-center justify-between sm:pt-4">
         <div className="flex space-x-2">
           <ToggleButton />
           <p>Publish</p>

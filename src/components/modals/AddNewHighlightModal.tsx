@@ -38,8 +38,8 @@ export default function Example() {
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
               <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 w-full sm:max-w-lg">
-                <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 w-max">
-                  <div className="sm:flex sm:items-start w-max">
+                <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                  <div className="sm:flex sm:items-start">
                     <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                       <div className="flex items-center justify-between mb-2">
                         <Dialog.Title
@@ -78,7 +78,7 @@ export default function Example() {
                         className="h-14 w-full sm:h-12 block rounded-md border-gray-300 sm:pl-4 sm:pr-[235px] mt-2 mb-6 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                         placeholder="Type highlight name"
                       />
-                      <div className="flex space-x-4">
+                      <div className="flex space-x-4 sm:space-x-4">
                         {/* ADD HIGHLIGHT CONTAINER */}
                         <div className="bg-gray-100 w-full flex justify-center rounded-md border-2 border-dashed border-gray-400 sm:px-6  sm:pt-[52px] ">
                           <div className="space-y-1 text-center pt-24 sm:pt-0 pb-20 sm:pb-9">

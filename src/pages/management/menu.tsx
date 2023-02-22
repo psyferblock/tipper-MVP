@@ -23,12 +23,12 @@ export default function Home() {
 
   return (
     <>
-      <div className="bg-gray-300 sm:h-fit sm:min-h-screen px-4 sm:px-12 py-5 sm:py-8">
+      <div className="bg-gray-300 sm:h-fit sm:min-h-screen px-3 sm:px-12 py-5 sm:py-8">
         {/* PAGE BG COLOR AND PADDING  */}
         <div className="hidden sm:block font-bold text-2xl pt-6 pb-4">
           Manage Entity
         </div>
-        <div className="flex space-x-4">
+        <div className="flex sm:space-x-4">
           {/* LEFT MENU */}
           <ManageEntityMenu />
           {/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
@@ -40,10 +40,12 @@ export default function Home() {
               </div>
             </div>
             {/* MENU HEADER AND ADD CATEGORY BUTTON */}
-            <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-6">
-                <div className="flex pt-1 space-x-2">
-                  <p className="text-xs mt-0.5 ">Upload your menu as a PDF</p>
+            <div className="flex  items-center justify-between">
+              <div className="flex  items-center space-x-6">
+                <div className="flex pt-1 space-x-2 sm:flex-row flex-row-reverse">
+                  <p className="text-xs mt-0.5 ml-2 sm:ml-0">
+                    Upload your menu as a PDF
+                  </p>
                   <ToggleButton />
                 </div>
               </div>
@@ -132,10 +134,10 @@ export default function Home() {
             )}
           </div>
         </div>
-        <EditMenuCategoryModal />
+        {/* <EditMenuCategoryModal /> */}
         {/* <AddNewMenuCategoryModal /> */}
         {/* <AddNewItemModal /> */}
-        {/* <EditItemModal /> */}
+        <EditItemModal />
       </div>
     </>
   );
