@@ -4,10 +4,10 @@ export default function Home() {
   const itemPicture = true;
 
   return (
-    <div className="flex h-20 sm:h-fit sm:flex-col bg-white rounded-md sm:w-56 overflow-hidden sm:overflow-hidden drop-shadow-lg sm:first-letter:pb-2">
+    <div className=" h-24 overflow-y-auto flex sm:h-fit sm:flex-col bg-white rounded-md sm:w-56 overflow-hidden sm:overflow-hidden drop-shadow-lg sm:first-letter:pb-2">
       {itemPicture && (
         <img
-          className="w-4/12 sm:w-full"
+          className="w-5/12 sm:w-full"
           src="https://cdn.ldsliving.com/dims4/default/2040800/2147483647/strip/true/crop/640x395+0+0/resize/640x395!/format/webp/quality/90/?url=http%3A%2F%2Flds-living-brightspot.s3.amazonaws.com%2F7c%2F30%2F864e82a22a48241f8a28bc7abb4d%2F42088.jpg"
           alt=""
         />
@@ -18,11 +18,10 @@ export default function Home() {
           <p>350,000 LBP</p>
         </div>
         <div className="px-2 sm:px-3">
-          Fresh natural home made pasta dough, locally-fed chicken breast
-          pieces, tomato sauce, parmesan, mushrooms, garlic, coriander, green
-          pepper.
+          Fresh natural home made pasta dough, cashew nuts, indian spices, goat
+          cheese, rocca leaves, chicken parmesan of other stuff
         </div>
-        <div className="flex justify-center space-x-3 pr-2 text-xs">
+        <div className="flex justify-start sm:justify-center space-x-3 pr-2 text-xs">
           <button className="flex items-center text-green-500">
             <svg
               xmlns="http://www.w3.org/2000/svg"

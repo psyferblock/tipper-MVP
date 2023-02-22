@@ -20,38 +20,43 @@ export default function Home() {
             Manage Entity
           </button>
         </div>
-        <div className="sm:flex sm:space-x-5 sm:h-[496px] sm:mb-8">
+        <div className="sm:flex sm:flex-row flex flex-col-reverse sm:space-x-5 sm:h-[496px] sm:mb-8">
           <EntityPageInfoLeftContainer />
 
           {/* EVERYTHING ON THE RIGHT OF THE LEFT COLUMN */}
           <div className="sm:h-[496px] sm:flex sm:flex-col justify-between sm:w-1/4 sm:grow">
             {/*  COVER PHOTOS CONTAINER */}
-            <div className="h-40 sm:h-[360px] sm:w-full bg-gray-300 rounded-lg drop-shadow-lg sm:px-6"></div>
+            <div
+              className="h-40 sm:h-[360px] sm:w-full bg-gray-300 rounded-lg drop-shadow-lg sm:px-6"
+              style={{
+                backgroundImage: `url(https://cdn.ldsliving.com/dims4/default/2040800/2147483647/strip/true/crop/640x395+0+0/resize/640x395!/format/webp/quality/90/?url=http%3A%2F%2Flds-living-brightspot.s3.amazonaws.com%2F7c%2F30%2F864e82a22a48241f8a28bc7abb4d%2F42088.jpg)`,
+              }}
+            ></div>
             {/* HIGHLIGHTS CONTAINER */}
             <div className="flex sm:space-x-3">
-              <div className="h-fit rounded-lg py-2 drop-shadow-lg text-xs grid grid-rows-1 grid-flow-col gap-2 sm:gap-6 overflow-x-auto">
-                <button className="h-[68px] sm:h-[116px] w-[68px] sm:w-[116px] rounded-full bg-white font-semibold ">
+              <div className="h-fit rounded-lg py-2 sm:drop-shadow-lg text-xs grid grid-rows-1 grid-flow-col gap-2 sm:gap-6 overflow-x-auto">
+                <button className="drop-shadow-lg sm:drop-shadow-none h-[68px] sm:h-[116px] w-[68px] sm:w-[116px] rounded-full bg-white font-semibold ">
                   Events
                 </button>
-                <button className="h-[68px] sm:h-[116px] w-[68px] sm:w-[116px] rounded-full bg-white font-semibold ">
+                <button className="drop-shadow-lg sm:drop-shadow-none h-[68px] sm:h-[116px] w-[68px] sm:w-[116px] rounded-full bg-white font-semibold ">
                   Discounts
                 </button>
-                <button className="h-[68px] sm:h-[116px] w-[68px] sm:w-[116px] rounded-full bg-white font-semibold ">
+                <button className="drop-shadow-lg sm:drop-shadow-none h-[68px] sm:h-[116px] w-[68px] sm:w-[116px] rounded-full bg-white font-semibold ">
                   Our Cookies
                 </button>
-                <button className="h-[68px] sm:h-[116px] w-[68px] sm:w-[116px] rounded-full bg-white font-semibold ">
+                <button className="drop-shadow-lg sm:drop-shadow-none h-[68px] sm:h-[116px] w-[68px] sm:w-[116px] rounded-full bg-white font-semibold ">
                   Happy Customers
                 </button>
-                <button className="h-[68px] sm:h-[116px] w-[68px] sm:w-[116px] rounded-full bg-white font-semibold ">
+                <button className="drop-shadow-lg sm:drop-shadow-none h-[68px] sm:h-[116px] w-[68px] sm:w-[116px] rounded-full bg-white font-semibold ">
                   Happy Customers
                 </button>
-                <button className="h-[68px] sm:h-[116px] w-[68px] sm:w-[116px] rounded-full bg-white font-semibold ">
+                <button className="drop-shadow-lg sm:drop-shadow-none h-[68px] sm:h-[116px] w-[68px] sm:w-[116px] rounded-full bg-white font-semibold ">
                   Happy Customers
                 </button>
-                <button className="h-[68px] sm:h-[116px] w-[68px] sm:w-[116px] rounded-full bg-white font-semibold ">
+                <button className="drop-shadow-lg sm:drop-shadow-none h-[68px] sm:h-[116px] w-[68px] sm:w-[116px] rounded-full bg-white font-semibold ">
                   Happy Customers
                 </button>
-                <button className="h-[68px] sm:h-[116px] w-[68px] sm:w-[116px] rounded-full bg-white font-semibold ">
+                <button className="drop-shadow-lg sm:drop-shadow-none h-[68px] sm:h-[116px] w-[68px] sm:w-[116px] rounded-full bg-white font-semibold ">
                   Happy Customers
                 </button>
               </div>
@@ -74,7 +79,7 @@ export default function Home() {
                 </svg>
                 <p className="text-xs text-blue-500 pb-5">Add Highlight</p>
               </button> */}
-                <div className="sm:h-[116px] sm:w-[116px] sm:py-3 rounded-lg bg-white font-semibold text-xs border-2 border-black">
+                <div className="sm:h-[116px] ml-1 sm:ml-0 sm:w-[116px] sm:py-3 rounded-lg bg-white font-semibold text-xs border-2 border-black">
                   <button className="flex items-center space-x-1 pl-2 text-[#128c7e] hover:text-green-500 h-1/2">
                     {/* WHATSAPP LOGO */}
                     <svg

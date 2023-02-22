@@ -1,11 +1,11 @@
 export default function Home() {
   return (
-    <div className=" bg-white rounded-lg py-4 drop-shadow-xl px-6 flex-none w-[307px]">
-      <div className="font-semibold flex justify-between flex-col space-y-4">
+    <div className=" bg-white rounded-lg mb-5 sm:mb-0 py-4 drop-shadow-xl px-3 sm:px-6 flex-none sm:w-[307px]">
+      <div className="font-semibold flex justify-between flex-col space-y-3 sm:space-y-4">
         {/* ENTITY TAGS DIV */}
         <div>
           <p>Entity Tags</p>
-          <div className="grid grid-rows-2 grid-flow-col gap-2 pb-3 pt-2 overflow-auto">
+          <div className="grid grid-rows-2 grid-flow-col gap-2 sm:gap-2 sm:pb-3 pb-3 pt-2 sm:pt-2 overflow-auto">
             <p className="w-fit  mr-3 flex bg-gray-200 rounded-xl text-black text-xs px-4 py-1 drop-shadow-sm">
               Homemade
             </p>
@@ -31,7 +31,7 @@ export default function Home() {
             </p>
           </div>
           {/* LEFT RIGHT NAVIGATION BUTTON */}
-          <div className="flex justify-end space-x-1 pr-1">
+          <div className="hidden sm:flex justify-end space-x-1 pr-1">
             <button>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -68,8 +68,8 @@ export default function Home() {
         </div>
         {/* OPENING HOURS DIV */}
         <div>
-          <p className="pb-0.5 -mt-5">Opening Hours</p>
-          <div className="px-1 divide-y">
+          <p className="sm:pb-0.5 -mt-3 sm:-mt-5">Opening Hours</p>
+          <div className="sm:px-1 divide-y">
             <div className="flex justify-between">
               <p className="font-normal text-xs">Monday-Friday</p>
               <p className="font-normal text-xs">8:00A.M-10:00P.M</p>
@@ -83,7 +83,7 @@ export default function Home() {
         {/* ADDRESS DIV */}
         <div>
           <p>Address</p>
-          <div className="px-1">
+          <div className="sm:px-1">
             <p className="font-normal text-xs">
               Badaro, Main Street, Building 12
             </p>
@@ -95,7 +95,7 @@ export default function Home() {
         {/* CONNECT WITH US DIV */}
         <div>
           <p className="pb-0.5">Connect With Us</p>
-          <div className="px-1 space-y-2">
+          <div className="sm:px-1 space-y-2">
             <p className="font-normal text-xs flex items-center space-x-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
