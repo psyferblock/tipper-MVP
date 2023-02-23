@@ -3,8 +3,8 @@ import ToggleButton from "@/components/ToggleButton";
 
 export default function Home() {
   return (
-    <div className="bg-gray-300 sm:h-fit min-h-screen sm:min-h-screen sm:px-12 py-5 sm:py-8">
-      <div className="h-fit  bg-white rounded-lg p-3 sm:p-4 drop-shadow-lg flex flex-col">
+    <div className="bg-gray-300 sm:h-fit min-h-screen sm:min-h-screen sm:px-12 pb-3 sm:py-0">
+      <div className="h-fit bg-white rounded-lg p-3 sm:p-4 drop-shadow-lg flex flex-col">
         {/* HIGHLIGHTS and ADD HIGHLIGHTS ROW */}
         <div className="flex pb-6">
           <div className="text-xl font-bold grow">Highlights</div>

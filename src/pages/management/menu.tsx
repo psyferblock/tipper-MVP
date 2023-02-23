@@ -23,7 +23,13 @@ export default function Home() {
 
   return (
     <>
-      <div className="bg-gray-300 sm:h-fit sm:min-h-screen px-3 sm:px-12 py-5 sm:py-8">
+      <div className="px-3 flex items-center justify-between sm:hidden h-14 sm:pl-16 sm:h-fit py-3 sm:pt-6 sm:mt-0 sm:pb-5 bg-gray-300 w-full z-50 sm:z-0 fixed sm:relative sm:mb-0 text-2xl sm:text-2xl font-bold sm:font-bold">
+        <p>Manage Menu</p>
+        <div className="sm:hidden">
+          <DropdownManagement />
+        </div>
+      </div>
+      <div className="bg-gray-300 sm:h-fit sm:min-h-screen px-3 sm:px-12 pt-0 pb-4 sm:py-8">
         {/* PAGE BG COLOR AND PADDING  */}
         <div className="hidden sm:block font-bold text-2xl pt-6 pb-4">
           Manage Entity
@@ -32,16 +38,14 @@ export default function Home() {
           {/* LEFT MENU */}
           <ManageEntityMenu />
           {/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+          {/* <div className="flex flex-col space-y-3 sm:space-y-2 w-full"> */}
+
           <div className="flex flex-col space-y-3 sm:space-y-2 w-full">
-            <div className="flex justify-between">
-              <div className="sm:hidden font-bold text-2xl">Manage Menu</div>
-              <div className="sm:hidden">
-                <DropdownManagement />
-              </div>
-            </div>
+            {/* DIV TO COMPENSATE THE HEADER DIV FIXED */}
+            <div className="h-14 sm:h-0"></div>
             {/* MENU HEADER AND ADD CATEGORY BUTTON */}
             <div className="flex  items-center justify-between">
-              <div className="flex  items-center space-x-6">
+              <div className="flex items-center space-x-6">
                 <div className="flex pt-1 space-x-2 sm:flex-row flex-row-reverse">
                   <p className="text-xs mt-0.5 ml-2 sm:ml-0">
                     Upload your menu as a PDF
@@ -134,10 +138,10 @@ export default function Home() {
             )}
           </div>
         </div>
-        {/* <EditMenuCategoryModal /> */}
+        <EditMenuCategoryModal />
         {/* <AddNewMenuCategoryModal /> */}
         {/* <AddNewItemModal /> */}
-        <EditItemModal />
+        {/* <EditItemModal /> */}
       </div>
     </>
   );

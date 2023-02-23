@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       {/* DESKTOP VERSION */}
-      <div className="bg-gray-300 sm:h-fit sm:min-h-screen px-3 sm:px-12 py-5 sm:py-8">
+      <div className="bg-gray-300 sm:h-fit sm:min-h-screen px-3 sm:px-12 sm:py-8">
         <div className="hidden sm:flex flex-col space-y-3 w-full">
           <div className="flex items-center justify-end">
             {/* ADD CATEGORY BUTTON */}
@@ -106,47 +106,50 @@ export default function Home() {
       </div>
       {/* //////////////////////////////////////////////////////////////////////////// */}
       {/* MOBILE VERSION */}
-      <div className="sm:hidden bg-gray-300 px-3 space-y-3">
-        <div className="flex items-center justify-between">
-          <div className="flex">
-            <button className="flex items-center ">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={2}
-                stroke="currentColor"
-                className="w-6 h-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M15.75 19.5L8.25 12l7.5-7.5"
-                />
-              </svg>
-            </button>
-            <p className="font-bold text-3xl">Breakfast</p>
-          </div>
-          <button className="mt-1 text-sm text-blue-500 flex items-center justify-end space-x-1">
+      <div className="w-full flex items-center px-3 py-3 justify-between bg-gray-300 z-50 fixed">
+        <div className="flex">
+          <button className="flex items-center ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              strokeWidth={3}
+              strokeWidth={2}
               stroke="currentColor"
-              className="w-4 h-4"
+              className="w-6 h-6"
             >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                d="M12 4.5v15m7.5-7.5h-15"
+                d="M15.75 19.5L8.25 12l7.5-7.5"
               />
             </svg>
-            Add Item
           </button>
+          <p className="font-bold text-3xl">Breakfast</p>
         </div>
-        <SearchBar placeHolder="Search for item" />
-        <ManageMenuItems />
+        <button className="mt-1 text-sm text-blue-500 flex items-center justify-end space-x-1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={3}
+            stroke="currentColor"
+            className="w-4 h-4"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M12 4.5v15m7.5-7.5h-15"
+            />
+          </svg>
+          Add Item
+        </button>
+      </div>
+      <div className="sm:hidden bg-gray-300 ">
+        <div className="h-16 sm:h-0"></div>
+        <div className="px-3 space-y-3">
+          <SearchBar placeHolder="Search for item" />
+          <ManageMenuItems />
+        </div>
       </div>
     </>
   );

@@ -18,7 +18,8 @@ function MyApp({
       supabaseClient={supabase}
       initialSession={pageProps.initialSession}
     >
-      {/* <NavBar /> */}
+      <NavBar />
+      <div className="h-16 mb-0 sm:mb-3"></div>
       {/* <div className="bg-gray-200 sm:min-h-screen sm:px-12 py-12 sm:py-8"> */}
       <Component {...pageProps} />
       {/* </div> */}

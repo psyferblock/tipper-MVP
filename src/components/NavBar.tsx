@@ -5,7 +5,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="bg-gray-500 flex justify-between sm:justify-between sm:items-center h-16 sm:h-[78px] px-3 sm:px-12">
+      <div className="bg-gray-500 fixed w-full z-10 flex justify-between sm:justify-between sm:items-center h-16 sm:h-[78px] px-3 sm:px-12">
         <button className="py-0 sm:py-[18px] font-light sm:font-normal text-white hover:text-purple-400 text-2xl sm:text-4xl">
           Tipper
         </button>

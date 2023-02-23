@@ -3,12 +3,14 @@ import DropdownManagement from "./DropdownManagement";
 export default function Home() {
   return (
     <>
-      <div className="flex items-center justify-between pb-5">
+      <div className="flex items-center fixed z-50 bg-gray-300 h-16 justify-between ">
         <div className="sm:hidden font-bold text-2xl ">Manage QR Code</div>
-        <div className="sm:hidden">
+        <div className="sm:hidden mt-1">
           <DropdownManagement />
         </div>
       </div>
+      <div className="h-16 sm:h-0"></div>
+
       <div className=" bg-white rounded-lg p-4 drop-shadow-lg">
         <div className="text-lg font-bold mb-2">Generate QR Code</div>
         <div className="space-y-1">

@@ -10,42 +10,42 @@ export default function Home() {
       <div className="h-fit  bg-white rounded-lg p-3 sm:p-4 drop-shadow-lg flex flex-col">
         {/* MOBILE VERSION MENU ITEMS TABLE */}
         <div className="grid grid-cols-2">
-          <div className="grid-cols-3">
+          <div>
             <p className="font-bold pb-2">Item</p>
             <div className="divide-y">
               <div className="flex py-2">
                 <img
-                  className="inline-block w-14 h-14 mr-3 rounded-full ring-2 ring-white"
+                  className="inline-block w-14 h-14 mr-1 rounded-full ring-2 ring-white"
                   src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                   alt=""
                 />
-                <p className="text-gray-500 ">Pasta Pomodoro</p>
+                <p className="text-gray-500 min-h-max">Pasta</p>
               </div>
               <div className="flex py-2">
                 <img
-                  className="inline-block w-14 h-14 mr-3 rounded-full ring-2 ring-white"
+                  className="inline-block w-14 h-14 mr-1 rounded-full ring-2 ring-white"
                   src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                   alt=""
                 />
-                <p className="text-gray-500 ">Penne Arrabiatta</p>
+                <p className="text-gray-500  min-h-max">Penne </p>
               </div>
               <div className="flex py-2">
                 <img
-                  className="inline-block w-14 h-14 mr-3 rounded-full ring-2 ring-white"
+                  className="inline-block w-14 h-14 mr-1 rounded-full ring-2 ring-white"
                   src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                   alt=""
                 />
-                <p className="text-gray-500 ">Chicken Escalope</p>
+                <p className="text-gray-500  min-h-max">Chicken Escalope</p>
               </div>
             </div>
           </div>
-          <div className="grid overflow-x-auto pb-4">
+          <div className="grid overflow-x-auto">
             <div className="flex space-x-7">
-              <p className="font-bold mb-2">Publish</p>
-              <p className="font-bold mb-2">Edit/Remove</p>
+              <p className="font-bold">Publish</p>
+              <p className="font-bold">Edit/Remove</p>
             </div>
             <div className="divide-y">
-              <div className="flex items-center space-x-1 pb-1">
+              <div className="flex items-center space-x-1">
                 <div className="flex items-center pt-2 space-x-2 w-20">
                   <ToggleButton />
                   <p className="pb-1 text-gray-500">Yes</p>
@@ -55,7 +55,7 @@ export default function Home() {
                   <button>Remove</button>
                 </div>
               </div>
-              <div className="flex items-center space-x-1 pb-1">
+              <div className="flex items-center space-x-1">
                 <div className="flex items-center pt-2 space-x-2 w-20">
                   <ToggleButton />
                   <p className="pb-1 text-gray-500">Yes</p>
@@ -65,7 +65,7 @@ export default function Home() {
                   <button>Remove</button>
                 </div>
               </div>
-              <div className="flex items-center space-x-1 pb-1">
+              <div className="flex items-center space-x-1">
                 <div className="flex items-center pt-2 space-x-2 w-20">
                   <ToggleButton />
                   <p className="pb-1 text-gray-500">Yes</p>
