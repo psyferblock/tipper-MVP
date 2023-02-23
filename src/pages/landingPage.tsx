@@ -46,7 +46,7 @@ export default function Home() {
         </div>
         {/* /////////////////////////////////////////////////////////////////////////////////// */}
         {/* LISTING OF ENTITIES */}
-        <div className="bg-white py-5 sm:py-10 space-y-3 sm:space-y-5">
+        <div className=" py-5 sm:py-10 space-y-3 sm:space-y-5">
           {/* MOST POPULAR ENTITIES */}
           <div>
             {/* HEADER AND VIEW ALL BUTTON */}

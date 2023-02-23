@@ -13,7 +13,7 @@ export default function Home() {
           <div>
             <p className="font-bold pb-2">Item</p>
             <div className="divide-y">
-              <div className="flex py-2">
+              <div className="flex py-2 ">
                 <img
                   className="inline-block w-14 h-14 mr-1 rounded-full ring-2 ring-white"
                   src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
@@ -35,7 +35,15 @@ export default function Home() {
                   src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                   alt=""
                 />
-                <p className="text-gray-500  min-h-max">Chicken Escalope</p>
+                <p className="text-gray-500  min-h-max">Penne </p>
+              </div>
+              <div className="flex py-2">
+                <img
+                  className="inline-block w-14 h-14 mr-1 rounded-full ring-2 ring-white"
+                  src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  alt=""
+                />
+                <p className="text-gray-500  min-h-max">Penne </p>
               </div>
             </div>
           </div>
@@ -44,8 +52,8 @@ export default function Home() {
               <p className="font-bold">Publish</p>
               <p className="font-bold">Edit/Remove</p>
             </div>
-            <div className="divide-y">
-              <div className="flex items-center space-x-1">
+            <div className="mt-2">
+              <div className="flex items-center space-x-1 border-b py-[18px]">
                 <div className="flex items-center pt-2 space-x-2 w-20">
                   <ToggleButton />
                   <p className="pb-1 text-gray-500">Yes</p>
@@ -55,7 +63,7 @@ export default function Home() {
                   <button>Remove</button>
                 </div>
               </div>
-              <div className="flex items-center space-x-1">
+              <div className="flex items-center space-x-1 border-b py-[18px] ">
                 <div className="flex items-center pt-2 space-x-2 w-20">
                   <ToggleButton />
                   <p className="pb-1 text-gray-500">Yes</p>
@@ -65,7 +73,17 @@ export default function Home() {
                   <button>Remove</button>
                 </div>
               </div>
-              <div className="flex items-center space-x-1">
+              <div className="flex items-center space-x-1 border-b py-[18px] ">
+                <div className="flex items-center pt-2 space-x-2 w-20">
+                  <ToggleButton />
+                  <p className="pb-1 text-gray-500">Yes</p>
+                </div>
+                <div className="flex items-center pt-1 space-x-4 text-blue-600">
+                  <button>Edit</button>
+                  <button>Remove</button>
+                </div>
+              </div>
+              <div className="flex items-center space-x-1 border-b py-[18px] ">
                 <div className="flex items-center pt-2 space-x-2 w-20">
                   <ToggleButton />
                   <p className="pb-1 text-gray-500">Yes</p>
