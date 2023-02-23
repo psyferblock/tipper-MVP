@@ -10,16 +10,48 @@ import ToggleButton from "@/components/ToggleButton";
 import { useState } from "react";
 
 export default function Home() {
-  // const [categoryNames[], setCategoryNames] = useState([
-  //   "Breakfast",
-  //   "Entry",
-  //   "Main",
-  //   "Desert",
-  //   "Drinks",
-  //   "Offers",
-  // ]);
-
+  //Owner chooses between pdf and manually inputting items
   const [isPdf, setIsPdf] = useState(false);
+
+  //Edit Category Name Modal
+  const [isEditCategoryNameModalOpen, setIsEditCategoryNameModalOpen] =
+    useState(false);
+
+  const handleEditCategoryNameButton = (e) => {
+    e.preventDefault();
+    setIsEditCategoryNameModalOpen(true);
+  };
+
+  const closeEditCategoryNameModal = () => {
+    setIsEditCategoryNameModalOpen(false);
+  };
+
+  const saveButtonInModalIsClicked = () => {
+    //write code to when "Save" is clicked
+    setIsEditCategoryNameModalOpen(false);
+  };
+
+  //Add New Category Modal
+  const [isAddCategoryModalOpen, setIsAddCategoryModalOpen] = useState(false);
+
+  const handleAddCategoryButton = (e) => {
+    e.preventDefault();
+    setIsAddCategoryModalOpen(true);
+  };
+
+  const closeAddCategoryModal = () => {
+    setIsAddCategoryModalOpen(false);
+  };
+
+  const saveAsDraftButtonInModalIsClicked = () => {
+    //write code to when "Save" is clicked
+    setIsAddCategoryModalOpen(false);
+  };
+
+  const publishButtonInModalIsClicked = () => {
+    //write code to when "Publish" is clicked
+    setIsAddCategoryModalOpen(false);
+  };
 
   return (
     <>
@@ -57,8 +89,11 @@ export default function Home() {
               {!isPdf && (
                 <>
                   {/* ADD CATEGORY BUTTON */}
-                  <button className="hidden sm:block w-32 h-10 hover:bg-blue-600 text-xs rounded-3xl bg-blue-500 text-white -mt-2">
-                    Add Category
+                  <button
+                    onClick={handleAddCategoryButton}
+                    className="hidden sm:block w-32 h-10 hover:bg-blue-600 text-xs rounded-3xl bg-blue-500 text-white -mt-2"
+                  >
+                    Add New Category
                   </button>
                 </>
               )}
@@ -121,12 +156,15 @@ export default function Home() {
                       d="M12 4.5v15m7.5-7.5h-15"
                     />
                   </svg>
-                  Add Category
+                  Add New Category
                 </button>
                 <div>
                   {/* MENU CATEGORIES */}
                   <div className="grid sm:grid-cols-4 gap-4">
-                    <MenuCategoryCard type="Breakfast" />
+                    <MenuCategoryCard
+                      type="Breakfast"
+                      click={handleEditCategoryNameButton}
+                    />
                     <MenuCategoryCard type="Entry" />
                     <MenuCategoryCard type="Main" />
                     <MenuCategoryCard type="Desert" />
@@ -138,10 +176,17 @@ export default function Home() {
             )}
           </div>
         </div>
-        <EditMenuCategoryModal />
-        {/* <AddNewMenuCategoryModal /> */}
-        {/* <AddNewItemModal /> */}
-        {/* <EditItemModal /> */}
+        <EditMenuCategoryModal
+          open={isEditCategoryNameModalOpen}
+          closeModal={closeEditCategoryNameModal}
+          saveButtonInModalIsClicked={saveButtonInModalIsClicked}
+        />
+        <AddNewMenuCategoryModal
+          open={isAddCategoryModalOpen}
+          closeModal={closeAddCategoryModal}
+          saveAsDraftButtonInModalIsClicked={saveAsDraftButtonInModalIsClicked}
+          publishButtonInModalIsClicked={publishButtonInModalIsClicked}
+        />
       </div>
     </>
   );

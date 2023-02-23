@@ -1,14 +1,34 @@
 import AddNewHighlightModal from "@/components/modals/AddNewHighlightModal";
 import ToggleButton from "@/components/ToggleButton";
+import { useState } from "react";
 
 export default function Home() {
+  const [isAddHighlightModalOpen, setIsAddHighlightModalOpen] = useState(false);
+
+  const handleAddHighlightButton = (e) => {
+    e.preventDefault();
+    setIsAddHighlightModalOpen(true);
+  };
+
+  const closeHighlightModal = () => {
+    setIsAddHighlightModalOpen(false);
+  };
+
+  const addButtonInModalIsClicked = () => {
+    //write code to when "Add" is clicked
+    setIsAddHighlightModalOpen(false);
+  };
+
   return (
     <div className="bg-gray-300 sm:h-fit min-h-screen sm:min-h-screen sm:px-12 pb-3 sm:py-0">
       <div className="h-fit bg-white rounded-lg p-3 sm:p-4 drop-shadow-lg flex flex-col">
         {/* HIGHLIGHTS and ADD HIGHLIGHTS ROW */}
         <div className="flex pb-6">
           <div className="text-xl font-bold grow">Highlights</div>
-          <button className="text-blue-500 flex items-center space-x-1">
+          <button
+            onClick={handleAddHighlightButton}
+            className="text-blue-500 flex items-center space-x-1"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -25,7 +45,11 @@ export default function Home() {
             </svg>
             Add Highlight
           </button>
-          <AddNewHighlightModal />
+          <AddNewHighlightModal
+            open={isAddHighlightModalOpen}
+            closeModal={closeHighlightModal}
+            addButtonInModalIsClicked={addButtonInModalIsClicked}
+          />
         </div>
 
         {/* DESKTOP HIGHLIGHTS COMPONENT */}
