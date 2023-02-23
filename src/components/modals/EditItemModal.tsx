@@ -10,7 +10,7 @@ export default function Example() {
     <Transition.Root show={open} as={Fragment}>
       <Dialog
         as="div"
-        className="relative z-10"
+        className="relative z-50"
         initialFocus={cancelButtonRef}
         onClose={setOpen}
       >
@@ -108,7 +108,7 @@ export default function Example() {
                       </div>
                       {/* IMAGE */}
                       <div className="w-full">
-                        <p className="text-xs">Image</p>
+                        <p className="text-xs text-start">Image</p>
                         {/* IMAGE CONTAINER */}
                         <div className="bg-gray-100 mt-1 w-full flex justify-center rounded-md border-2 border-dashed border-gray-400 px-6 pt-[52px] ">
                           <div className="space-y-1 text-center">
@@ -152,24 +152,22 @@ export default function Example() {
                     </div>
                   </div>
                 </div>
-                <div className="bg-gray-50 px-4 py-3 flex justify-end items-center sm:px-6">
-                  <div>
-                    <button
-                      type="button"
-                      className="mt-3 inline-flex w-full justify-center rounded-3xl border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
-                      onClick={() => setOpen(false)}
-                      ref={cancelButtonRef}
-                    >
-                      Cancel
-                    </button>
-                    <button
-                      type="button"
-                      className="inline-flex w-full justify-center rounded-3xl border border-transparent bg-blue-500 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
-                      onClick={() => setOpen(false)}
-                    >
-                      Save
-                    </button>
-                  </div>
+                <div className="bg-gray-50 px-4 py-2 sm:py-3 flex justify-end items-center sm:px-6">
+                  <button
+                    type="button"
+                    className="mr-3 inline-flex w-full justify-center rounded-3xl border border-gray-300 bg-white px-7 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+                    onClick={() => setOpen(false)}
+                    ref={cancelButtonRef}
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="button"
+                    className="inline-flex w-full justify-center rounded-3xl border border-transparent bg-blue-500 px-9 py-2 text-base font-medium text-white shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
+                    onClick={() => setOpen(false)}
+                  >
+                    Save
+                  </button>
                 </div>
               </Dialog.Panel>
             </Transition.Child>

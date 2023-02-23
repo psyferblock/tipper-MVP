@@ -1,9 +1,9 @@
 export default function SignIn() {
   return (
-    <div className="bg-gray-300 sm:h-fit sm:min-h-screen px-4 sm:px-12 py-5 sm:py-8">
+    <div className="sm:h-fit sm:min-h-screen sm:px-0 px-3 py-5 sm:py-0">
       <div className="sm:flex">
         {/* LEFT PART OF SCREEN */}
-        <div className="sm:w-1/3 mb-10 sm:mb-0">
+        <div className="sm:w-1/3 sm:mt-5 mb-10 sm:px-5">
           <button className="flex items-center ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +24,7 @@ export default function SignIn() {
         </div>
         {/* //////////////////////////////////////////////////////////////////////////////////// */}
         {/* RIGHT PART OF SCREEN */}
-        <div className="bg-white grow sm:py-28 sm:px-40 ">
+        <div className="bg-white grow sm:py-28 sm:px-40">
           <div className="mb-9 text-center sm:text-start">
             <p className="text-3xl font-bold ">Sign In</p>
             <p className="italic text-sm font-light">

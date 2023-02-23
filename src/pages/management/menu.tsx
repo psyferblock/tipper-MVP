@@ -10,40 +10,78 @@ import ToggleButton from "@/components/ToggleButton";
 import { useState } from "react";
 
 export default function Home() {
-  // const [categoryNames[], setCategoryNames] = useState([
-  //   "Breakfast",
-  //   "Entry",
-  //   "Main",
-  //   "Desert",
-  //   "Drinks",
-  //   "Offers",
-  // ]);
-
+  //Owner chooses between pdf and manually inputting items
   const [isPdf, setIsPdf] = useState(false);
+
+  //Edit Category Name Modal
+  const [isEditCategoryNameModalOpen, setIsEditCategoryNameModalOpen] =
+    useState(false);
+
+  const handleEditCategoryNameButton = (e) => {
+    e.preventDefault();
+    setIsEditCategoryNameModalOpen(true);
+  };
+
+  const closeEditCategoryNameModal = () => {
+    setIsEditCategoryNameModalOpen(false);
+  };
+
+  const saveButtonInModalIsClicked = () => {
+    //write code to when "Save" is clicked
+    setIsEditCategoryNameModalOpen(false);
+  };
+
+  //Add New Category Modal
+  const [isAddCategoryModalOpen, setIsAddCategoryModalOpen] = useState(false);
+
+  const handleAddCategoryButton = (e) => {
+    e.preventDefault();
+    setIsAddCategoryModalOpen(true);
+  };
+
+  const closeAddCategoryModal = () => {
+    setIsAddCategoryModalOpen(false);
+  };
+
+  const saveAsDraftButtonInModalIsClicked = () => {
+    //write code to when "Save" is clicked
+    setIsAddCategoryModalOpen(false);
+  };
+
+  const publishButtonInModalIsClicked = () => {
+    //write code to when "Publish" is clicked
+    setIsAddCategoryModalOpen(false);
+  };
 
   return (
     <>
-      <div className="bg-gray-300 sm:h-fit sm:min-h-screen px-4 sm:px-12 py-5 sm:py-8">
+      <div className="px-3 flex items-center justify-between sm:hidden h-14 sm:pl-16 sm:h-fit py-3 sm:pt-6 sm:mt-0 sm:pb-5 bg-gray-300 w-full z-50 sm:z-0 fixed sm:relative sm:mb-0 text-2xl sm:text-2xl font-bold sm:font-bold">
+        <p>Manage Menu</p>
+        <div className="sm:hidden">
+          <DropdownManagement />
+        </div>
+      </div>
+      <div className="bg-gray-300 sm:h-fit sm:min-h-screen px-3 sm:px-12 pt-0 pb-4 sm:py-8">
         {/* PAGE BG COLOR AND PADDING  */}
         <div className="hidden sm:block font-bold text-2xl pt-6 pb-4">
           Manage Entity
         </div>
-        <div className="flex space-x-4">
+        <div className="flex sm:space-x-4">
           {/* LEFT MENU */}
           <ManageEntityMenu />
           {/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+          {/* <div className="flex flex-col space-y-3 sm:space-y-2 w-full"> */}
+
           <div className="flex flex-col space-y-3 sm:space-y-2 w-full">
-            <div className="flex justify-between">
-              <div className="sm:hidden font-bold text-2xl">Menu</div>
-              <div className="sm:hidden">
-                <DropdownManagement />
-              </div>
-            </div>
+            {/* DIV TO COMPENSATE THE HEADER DIV FIXED */}
+            <div className="h-14 sm:h-0"></div>
             {/* MENU HEADER AND ADD CATEGORY BUTTON */}
-            <div className="flex items-center justify-between">
+            <div className="flex  items-center justify-between">
               <div className="flex items-center space-x-6">
-                <div className="flex pt-1 space-x-2">
-                  <p className="text-xs mt-0.5 ">Upload your menu as a PDF</p>
+                <div className="flex pt-1 space-x-2 sm:flex-row flex-row-reverse">
+                  <p className="text-xs mt-0.5 ml-2 sm:ml-0">
+                    Upload your menu as a PDF
+                  </p>
                   <ToggleButton />
                 </div>
               </div>
@@ -51,8 +89,11 @@ export default function Home() {
               {!isPdf && (
                 <>
                   {/* ADD CATEGORY BUTTON */}
-                  <button className="hidden sm:block w-32 h-10 hover:bg-blue-600 text-xs rounded-3xl bg-blue-500 text-white -mt-2">
-                    Add Category
+                  <button
+                    onClick={handleAddCategoryButton}
+                    className="hidden sm:block w-32 h-10 hover:bg-blue-600 text-xs rounded-3xl bg-blue-500 text-white -mt-2"
+                  >
+                    Add New Category
                   </button>
                 </>
               )}
@@ -115,12 +156,15 @@ export default function Home() {
                       d="M12 4.5v15m7.5-7.5h-15"
                     />
                   </svg>
-                  Add Category
+                  Add New Category
                 </button>
                 <div>
                   {/* MENU CATEGORIES */}
                   <div className="grid sm:grid-cols-4 gap-4">
-                    <MenuCategoryCard type="Breakfast" />
+                    <MenuCategoryCard
+                      type="Breakfast"
+                      click={handleEditCategoryNameButton}
+                    />
                     <MenuCategoryCard type="Entry" />
                     <MenuCategoryCard type="Main" />
                     <MenuCategoryCard type="Desert" />
@@ -132,10 +176,17 @@ export default function Home() {
             )}
           </div>
         </div>
-        <EditMenuCategoryModal />
-        {/* <AddNewMenuCategoryModal /> */}
-        {/* <AddNewItemModal /> */}
-        {/* <EditItemModal /> */}
+        <EditMenuCategoryModal
+          open={isEditCategoryNameModalOpen}
+          closeModal={closeEditCategoryNameModal}
+          saveButtonInModalIsClicked={saveButtonInModalIsClicked}
+        />
+        <AddNewMenuCategoryModal
+          open={isAddCategoryModalOpen}
+          closeModal={closeAddCategoryModal}
+          saveAsDraftButtonInModalIsClicked={saveAsDraftButtonInModalIsClicked}
+          publishButtonInModalIsClicked={publishButtonInModalIsClicked}
+        />
       </div>
     </>
   );

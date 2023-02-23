@@ -3,16 +3,17 @@ import MenuNavigation from "./MenuNavigation";
 
 export default function Home() {
   return (
-    <div className="py-12">
-      <div className="text-center my-5 pb-4">
-        <p className="font-bold text-xl">Our Inventory</p>
-        <p className="text-xs font-semibold">(Rate: 45,000LBP)</p>
+    <div className="bg-gray-300 py-6 sm:py-8">
+      <div className="text-center sm:my-5 pb-2 sm:pb-4">
+        <p className="font-bold text-xl mx-auto pt-2 sm:pt-3 border-t-4 border-blue-500 w-fit">
+          Our Inventory
+        </p>
       </div>
-      <div className="flex space-x-1">
-        <div className="w-1/6">
+      <div className=" sm:flex sm:space-x-1">
+        <div className="sm:w-1/6 ">
           <MenuNavigation />
         </div>
-        <div className="grid grid-rows-1 grid-flow-col gap-5 pb-5 overflow-x-auto">
+        <div className="grid h-96 sm:h-fit gap-3 overflow-y-auto sm:grid sm:grid-rows-1 sm:grid-flow-col sm:gap-5 sm:pb-5 sm:overflow-x-auto">
           <MenuItemCard />
           <MenuItemCard />
           <MenuItemCard />
@@ -27,7 +28,7 @@ export default function Home() {
         </div>
       </div>
       {/* LEFT RIGHT NAVIGATION BUTTON */}
-      <div className="flex justify-end space-x-1 pr-1">
+      <div className="hidden sm:flex justify-end space-x-1 pr-1">
         <button>
           <svg
             xmlns="http://www.w3.org/2000/svg"

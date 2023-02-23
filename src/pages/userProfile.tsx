@@ -3,11 +3,12 @@ import Navbar from "@/components/NavBar";
 export default function Home() {
   return (
     <>
-      <div className="bg-gray-300 sm:h-fit sm:min-h-screen px-4 sm:px-12 py-5 sm:py-8">
-        <div className="space-y-8">
-          <p className="pb-5 bg-gray-300 w-full top-0 z-50 fixed sm:relative sm:mb-8 text-2xl sm:text-2xl font-bold sm:font-bold">
-            Profile
-          </p>
+      <p className="h-14 pl-3 sm:pl-16 sm:h-fit pt-3 sm:pt-6 sm:mt-0 sm:pb-5 bg-gray-300 w-full z-50 sm:z-0 fixed sm:relative sm:mb-0 text-2xl sm:text-2xl font-bold sm:font-bold">
+        Profile
+      </p>
+      <div className="h-14 sm:h-0"></div>
+      <div className=" sm:h-fit sm:min-h-screen px-3 sm:px-12 py-2 sm:py-8">
+        <div className="space-y-8 ">
           <div className=" sm:flex sm:flex-col space-y-5 sm:space-y-5 sm:px-[155px]">
             {/* CREATE ENTITY CONTAINER */}
             <div className="bg-white drop-shadow-lg rounded-lg sm:rounded-lg sm:h-fit sm:w-fit pt-2  pb-3  sm:py-5 px-4 sm:px-6">
