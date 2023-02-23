@@ -4,7 +4,7 @@ import EntitiesCardsRow from "@/components/landing page/EntitiesCardsRow";
 export default function Home() {
   return (
     <>
-      <div className="pb-8">
+      <div className="py-8">
         <div className="w-7/12 mx-auto flex bg-white border border-gray-400 py-0 px-3 rounded-full overflow-hidden">
           <div className="col-span-6 sm:col-span-3">
             <select
@@ -26,7 +26,7 @@ export default function Home() {
         </div>
       </div>
       {/* LISTING OF ENTITIES */}
-      <div className="py-10 pl-8 space-y-5 bg-white">
+      <div className="py-10 pl-8 space-y-5 ">
         {/* /////////////////////////////////////////////////////////////////////////////////// */}
         {/* MOST POPULAR ENTITIES */}
         <div>

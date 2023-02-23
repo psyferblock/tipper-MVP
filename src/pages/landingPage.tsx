@@ -5,7 +5,7 @@ import Navbar from "@/components/NavBar";
 export default function Home() {
   return (
     <>
-      <div className="bg-gray-300 sm:h-fit sm:min-h-screen px-3 sm:px-12 py-5 sm:py-8">
+      <div className="sm:h-fit sm:min-h-screen px-3 sm:px-12 py-5 sm:py-8">
         <div
           className="py-20 sm:py-32"
           style={{

@@ -21,7 +21,7 @@ export default function Home() {
       </div>
       <div className="h-14 sm:h-0"></div>
 
-      <div className="bg-gray-300 sm:h-fit sm:min-h-screen px-3 sm:px-12 py-3 sm:py-8">
+      <div className=" sm:h-fit sm:min-h-screen px-3 sm:px-12 py-3 sm:py-8">
         <div className="hidden sm:flex items-center justify-between pb-5 sm:pb-9">
           <p className=" font-semibold text-2xl ">Entity Name</p>
           <button className="sm:w-32 sm:h-9 h-fit rounded-3xl sm:border-2 sm:border-gray-500 text-blue-500 sm:text-gray-500 text-xs">

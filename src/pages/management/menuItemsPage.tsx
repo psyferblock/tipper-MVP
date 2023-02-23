@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       {/* DESKTOP VERSION */}
-      <div className="bg-gray-300 sm:h-fit sm:min-h-screen px-3 sm:px-12 sm:py-8">
+      <div className=" sm:h-fit sm:min-h-screen px-3 sm:px-12 sm:py-8">
         <div className="hidden sm:flex flex-col space-y-3 w-full">
           <div className="flex items-center justify-end">
             {/* ADD CATEGORY BUTTON */}
@@ -124,7 +124,7 @@ export default function Home() {
               />
             </svg>
           </button>
-          <p className="font-bold text-3xl">Breakfast</p>
+          <p className="font-bold text-3xl ">Breakfast</p>
         </div>
         <button className="mt-1 text-sm text-blue-500 flex items-center justify-end space-x-1">
           <svg
@@ -144,7 +144,7 @@ export default function Home() {
           Add Item
         </button>
       </div>
-      <div className="sm:hidden bg-gray-300 ">
+      <div className="sm:hidden  ">
         <div className="h-16 sm:h-0"></div>
         <div className="px-3 space-y-3">
           <SearchBar placeHolder="Search for item" />

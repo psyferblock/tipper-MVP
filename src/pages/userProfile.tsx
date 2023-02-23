@@ -7,7 +7,7 @@ export default function Home() {
         Profile
       </p>
       <div className="h-14 sm:h-0"></div>
-      <div className="bg-gray-300 sm:h-fit sm:min-h-screen px-3 sm:px-12 py-2 sm:py-8">
+      <div className=" sm:h-fit sm:min-h-screen px-3 sm:px-12 py-2 sm:py-8">
         <div className="space-y-8 ">
           <div className=" sm:flex sm:flex-col space-y-5 sm:space-y-5 sm:px-[155px]">
             {/* CREATE ENTITY CONTAINER */}

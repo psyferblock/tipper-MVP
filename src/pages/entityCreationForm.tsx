@@ -1,9 +1,9 @@
 export default function Home() {
   return (
-    <div className="sm:bg-gray-300 sm:h-fit sm:min-h-screen px-3 sm:px-12 py-5 sm:py-8">
+    <div className=" sm:h-fit sm:min-h-screen px-3 sm:px-0 py-5 sm:py-0">
       <div className="sm:flex">
         {/* LEFT PART OF SCREEN */}
-        <div className="w-1/3 mb-10 sm:mb-0">
+        <div className="w-1/3 mb-10 sm:mb-0 sm:py-5 sm:px-5">
           <button className="flex items-center ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
