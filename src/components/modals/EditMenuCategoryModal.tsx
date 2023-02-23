@@ -1,18 +1,18 @@
 import { Fragment, useRef, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 
-export default function Home() {
-  const [open, setOpen] = useState(true);
+export default function Home(props) {
+  // const [open, setOpen] = useState(true);
 
   const cancelButtonRef = useRef(null);
 
   return (
-    <Transition.Root show={open} as={Fragment}>
+    <Transition.Root show={props.open} as={Fragment}>
       <Dialog
         as="div"
         className="relative z-50"
         initialFocus={cancelButtonRef}
-        onClose={setOpen}
+        onClose={props.closeModal}
       >
         <Transition.Child
           as={Fragment}
@@ -64,7 +64,7 @@ export default function Home() {
                   <button
                     type="button"
                     className="mr-5 sm:mr-2 inline-flex justify-center rounded-3xl border border-gray-300 bg-white px-8 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
-                    onClick={() => setOpen(false)}
+                    onClick={props.closeModal}
                     ref={cancelButtonRef}
                   >
                     Cancel
@@ -72,7 +72,7 @@ export default function Home() {
                   <button
                     type="button"
                     className="inline-flex justify-center rounded-3xl border border-transparent bg-blue-500 px-9 py-2 text-base font-medium text-white shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
-                    onClick={() => setOpen(false)}
+                    onClick={props.saveButtonInModalIsClicked}
                   >
                     Save
                   </button>

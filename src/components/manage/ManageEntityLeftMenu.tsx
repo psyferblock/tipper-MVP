@@ -3,24 +3,42 @@ export default function ManageEntityMenu() {
     <>
       <div className="hidden sm:block sm:w-[340px]">
         <div className="rounded-lg bg-white mr-4 py-6  flex flex-col drop-shadow-lg">
-          <button className="text-black hover:bg-gray-100 px-6 py-2 flex justify-start sm:focus:text-blue-600 sm:focus:bg-gray-100">
+          <a
+            href="/management/menu"
+            className="text-black hover:bg-gray-100 px-6 py-2 flex justify-start sm:focus:text-blue-600 sm:focus:bg-gray-100 sm:hover:text-blue-600"
+          >
             Menu
-          </button>
-          <button className="text-black hover:bg-gray-100 px-6 py-2 flex justify-start sm:focus:text-blue-600 sm:focus:bg-gray-100">
+          </a>
+          <a
+            href="/management/exchangeRate"
+            className="text-black hover:bg-gray-100 px-6 py-2 flex justify-start sm:focus:text-blue-600 sm:focus:bg-gray-100 sm:hover:text-blue-600"
+          >
             Exchange Rate
-          </button>
-          <button className="text-black hover:bg-gray-100 px-6 py-2 flex justify-start sm:focus:text-blue-600 sm:focus:bg-gray-100">
+          </a>
+          <a
+            href="/management/entityInfo"
+            className="text-black hover:bg-gray-100 px-6 py-2 flex justify-start sm:focus:text-blue-600 sm:focus:bg-gray-100 sm:hover:text-blue-600"
+          >
             General Information
-          </button>
-          <button className="text-black hover:bg-gray-100 px-6 py-2 flex justify-start sm:focus:text-blue-600 sm:focus:bg-gray-100">
+          </a>
+          <a
+            href="/management/highlightReels"
+            className="text-black hover:bg-gray-100 px-6 py-2 flex justify-start sm:focus:text-blue-600 sm:focus:bg-gray-100 sm:hover:text-blue-600"
+          >
             Highlight Reels
-          </button>
-          <button className="text-black hover:bg-gray-100 px-6 py-2 flex justify-start sm:focus:text-blue-600 sm:focus:bg-gray-100">
+          </a>
+          <a
+            href="/management/inventory"
+            className="text-black hover:bg-gray-100 px-6 py-2 flex justify-start sm:focus:text-blue-600 sm:focus:bg-gray-100 sm:hover:text-blue-600"
+          >
             Inventory
-          </button>
-          <button className="text-black hover:bg-gray-100 px-6 py-2 flex justify-start sm:focus:text-blue-600 sm:focus:bg-gray-100">
+          </a>
+          <a
+            href="/management/qrCode"
+            className="text-black hover:bg-gray-100 px-6 py-2 flex justify-start sm:focus:text-blue-600 sm:focus:bg-gray-100 sm:hover:text-blue-600"
+          >
             QR Code
-          </button>
+          </a>
         </div>
       </div>
     </>

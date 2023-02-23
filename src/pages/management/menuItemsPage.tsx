@@ -1,4 +1,5 @@
 import ManageMenuItems from "@/components/manage/ManageMenuItems";
+import AddNewItemModal from "@/components/modals/AddNewItemModal";
 import SearchBar from "@/components/SearchBar";
 import ToggleButton from "@/components/ToggleButton";
 
@@ -151,6 +152,8 @@ export default function Home() {
           <ManageMenuItems />
         </div>
       </div>
+      {/* <AddNewItemModal /> */}
+      {/* <EditItemModal /> */}
     </>
   );
 }

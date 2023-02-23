@@ -108,7 +108,7 @@ export default function Home() {
       {/* MOBILE VERSION */}
       <div className="w-full flex items-center px-3 py-3 justify-between bg-gray-300 z-50 fixed">
         <div className="flex">
-          <button className="flex items-center ">
+          <button className="flex items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

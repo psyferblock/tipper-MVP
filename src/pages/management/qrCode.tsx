@@ -4,7 +4,7 @@ import GenerateQrCodeSection from "@/components/GenerateQrCodeSection";
 export default function Home() {
   return (
     <>
-      <div className="flex items-center fixed z-50 bg-gray-300 h-16 justify-between w-full">
+      <div className="sm:hidden flex items-center fixed z-50 bg-gray-300 h-16 justify-between w-full">
         <div className="sm:hidden font-bold text-2xl ">Manage QR Code</div>
         <div className="sm:hidden mt-1">
           <DropdownManagement />
