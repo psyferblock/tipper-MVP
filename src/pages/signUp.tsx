@@ -1,4 +1,4 @@
-export default function Home() {
+export default function signUp() {
   return (
     <div className=" sm:h-fit sm:min-h-screen px-3 sm:px-0 py-5 sm:py-0">
       <div className="sm:flex">
@@ -33,7 +33,7 @@ export default function Home() {
           </div>
           {/* INPUT FORMS */}
           <div className="space-y-3">
-            {/* BUSINESS NAME */}
+            BUSINESS NAME
             <div className="space-y-1">
               <label
                 htmlFor="names"
@@ -184,14 +184,6 @@ export default function Home() {
                 />
               </div>
             </div>
-            {/* PASSWORD */}
-            <div className="space-y-1">
-              <label
-                htmlFor="names"
-                className="text-xs text-gray-600 font-medium"
-              >
-                Password*
-              </label>
               {/* EMAIL ADDRESS INPUT FIELD */}
               <input
                 type="text"
@@ -200,6 +192,15 @@ export default function Home() {
                 placeholder="Enter Password"
               />
             </div>
+            {/* PASSWORD */}
+            <div className="space-y-1">
+              <label
+                htmlFor="names"
+                className="text-xs text-gray-600 font-medium"
+              >
+                Password*
+              </label>
+            
             {/* CONFIRM PASSWORD */}
             <div className="space-y-1">
               <label

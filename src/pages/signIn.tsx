@@ -1,4 +1,27 @@
+import { supabase } from "@/utils/supabaseClient";
+import { useState} from 'react'
+import { useRouter } from "next/router";
+
 export default function SignIn() {
+
+  const [password, setPassword] = useState<string | undefined>();
+  const [email, setEmail] = useState<string | undefined>();
+  const router = useRouter();
+
+  async function signInWithEmail() {
+    try {
+      if (email && password) {
+        const response = await supabase.auth.signInWithPassword({
+          "email": email,
+          "password": password,
+        });
+        if (response.error) throw response.error;
+        const userId = await response.data.user?.id;
+        console.log("userId", userId);
+        router.push("/")
+      }
+    } catch (error) {}
+  }
   return (
     <div className="sm:h-fit sm:min-h-screen sm:px-0 px-3 py-5 sm:py-0">
       <div className="sm:flex">
@@ -41,12 +64,15 @@ export default function SignIn() {
               >
                 Email Address*
               </label>
-              {/* ENTITY NAME INPUT FIELD */}
+              {/* ENTITY EMAIL INPUT FIELD */}
               <input
                 type="text"
                 id="Email Address*"
                 className="h-12 block w-full rounded-md border-gray-300 pl-4 pr-12 mb-3 focus:border-indigo-500 focus:ring-indigo-500 text-xs sm:text-sm"
                 placeholder="Email Address"
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
               />
             </div>
             {/* PASSWORD INPUT */}
@@ -63,16 +89,22 @@ export default function SignIn() {
                 id="Password"
                 className="h-12 block w-full rounded-md border-gray-300 pl-4 pr-12 mb-3 focus:border-indigo-500 focus:ring-indigo-500 text-xs sm:text-sm"
                 placeholder="Password"
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                }}
               />
             </div>
           </div>
           {/* SIGN IN BUTTON */}
-          <button className="w-full h-10 mt-8 hover:bg-blue-600 hover:text-lg rounded-3xl bg-blue-500 text-white text-sm">
+          <button href="/" className="w-full h-10 mt-8 hover:bg-blue-600 hover:text-lg rounded-3xl bg-blue-500 text-white text-sm" onClick={signInWithEmail} >
             Sign In
           </button>
           <div className="flex items-center justify-center mt-3 space-x-1">
-            <p>Don't have an account?</p>
-            <a className="underline hover:text-blue-600 font-semibold" href="">
+            <p> Don't have an account?</p>
+            <a
+              href="signUpPage"
+              className="underline hover:text-blue-600 font-semibold"
+            >
               Sign Up Here
             </a>
           </div>

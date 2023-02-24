@@ -1,7 +1,8 @@
 import { useState } from "react";
+import signUpComponent from "./SignUpComponent";
 
 export default function Navbar() {
-  const isSignedIn = true;
+  const { isSignedIn, setSignedIn } = useState(false);
 
   return (
     <>

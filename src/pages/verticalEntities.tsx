@@ -1,7 +1,7 @@
 import EntityCard from "@/components/EntityCard";
 import EntitiesCardsGrid from "@/components/landing page/EntitiesCardsGrid";
 import EntitiesCardsRow from "@/components/landing page/EntitiesCardsRow";
-import Navbar from "@/components/NavBar";
+import Navbar from "@/components/navbar/NavBar";
 
 export default function Home() {
   return (

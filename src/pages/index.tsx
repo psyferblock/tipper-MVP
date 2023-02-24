@@ -1,8 +1,19 @@
 import EntityCard from "@/components/EntityCard";
 import EntitiesCardsRow from "@/components/landing page/EntitiesCardsRow";
-import Navbar from "@/components/NavBar";
+import Navbar from "@/components/navbar/NavBar";
+import { supabase } from "@/utils/supabaseClient";
+import { useEffect } from "react";
 
 export default function Home() {
+
+  useEffect(()=>{
+    const getUser=async ()=>{
+      const user = await supabase.auth.getUser();
+      console.log('user', user)
+    }
+    getUser()
+  },[])
+
   return (
     <>
       <div className="sm:h-fit sm:min-h-screen px-3 sm:px-12 py-5 sm:py-8">
