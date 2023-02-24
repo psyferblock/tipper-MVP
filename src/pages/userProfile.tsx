@@ -4,6 +4,8 @@ import { useRouter } from "next/router";
 export default function Home() {
   const router = useRouter();
 
+  const userOwnsEntity = true;
+
   const handleCreateNowButton = () => {
     router.push("/entityCreationForm");
   };
@@ -29,15 +31,20 @@ export default function Home() {
                     and the heavens and then all the kingdom.
                   </p>
                 </div>
-                <button
-                  onClick={handleCreateNowButton}
-                  className="bg-blue-500 text-white w-fit px-5  sm:w-40 h-10 sm:h-10 rounded-3xl sm:rounded-3xl sm:text-sm sm:hover:text-base"
-                >
-                  Create Now
-                </button>
-                {/* <button className="bg-blue-500 text-white w-fit px-5 sm:w-48 sm:px-5 h-10 sm:h-10 rounded-3xl sm:rounded-3xl sm:text-sm ">
-                  Access My Entity
-                </button> */}
+
+                {/* ACCESS OR CREATE ENTITY BUTTON */}
+                {userOwnsEntity ? (
+                  <button className="bg-blue-500 text-white w-fit px-5 sm:w-48 h-10 sm:h-10 rounded-3xl sm:rounded-3xl sm:text-sm sm:hover:bg-blue-600">
+                    Access My Entity
+                  </button>
+                ) : (
+                  <button
+                    onClick={handleCreateNowButton}
+                    className="bg-blue-500 text-white w-fit px-5  sm:w-40 h-10 sm:h-10 rounded-3xl sm:rounded-3xl sm:text-sm sm:hover:text-base"
+                  >
+                    Create Now
+                  </button>
+                )}
               </div>
             </div>
             {/* ////////////////////////////////////////////////////////////////////////////////////////////// */}

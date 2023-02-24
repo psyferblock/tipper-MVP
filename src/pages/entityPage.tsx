@@ -12,6 +12,16 @@ export default function Home() {
   // BOOLEAN TO DETERMINE WHETHER IT IS ADD HIGHLIGHT OR SHARE BUTTON NEXT TO HIGHLIGHTS
   const userIsOwner = true;
 
+  const listOfHighlightReels = [
+    "Events",
+    "Discounts",
+    "Our Cookies",
+    "Our Customers",
+    "Our Customers",
+    "Our Customers",
+    "Our Customers",
+  ];
+
   const router = useRouter();
 
   const handleManageEntityButton = (e) => {
@@ -62,30 +72,11 @@ export default function Home() {
             {/* HIGHLIGHTS CONTAINER */}
             <div className="flex sm:space-x-3">
               <div className="h-fit rounded-lg py-2 sm:drop-shadow-lg text-xs grid grid-rows-1 grid-flow-col gap-2 sm:gap-6 overflow-x-auto">
-                <button className="drop-shadow-lg sm:drop-shadow-none h-[68px] sm:h-[116px] w-[68px] sm:w-[116px] rounded-full bg-white font-semibold ">
-                  Events
-                </button>
-                <button className="drop-shadow-lg sm:drop-shadow-none h-[68px] sm:h-[116px] w-[68px] sm:w-[116px] rounded-full bg-white font-semibold ">
-                  Discounts
-                </button>
-                <button className="drop-shadow-lg sm:drop-shadow-none h-[68px] sm:h-[116px] w-[68px] sm:w-[116px] rounded-full bg-white font-semibold ">
-                  Our Cookies
-                </button>
-                <button className="drop-shadow-lg sm:drop-shadow-none h-[68px] sm:h-[116px] w-[68px] sm:w-[116px] rounded-full bg-white font-semibold ">
-                  Happy Customers
-                </button>
-                <button className="drop-shadow-lg sm:drop-shadow-none h-[68px] sm:h-[116px] w-[68px] sm:w-[116px] rounded-full bg-white font-semibold ">
-                  Happy Customers
-                </button>
-                <button className="drop-shadow-lg sm:drop-shadow-none h-[68px] sm:h-[116px] w-[68px] sm:w-[116px] rounded-full bg-white font-semibold ">
-                  Happy Customers
-                </button>
-                <button className="drop-shadow-lg sm:drop-shadow-none h-[68px] sm:h-[116px] w-[68px] sm:w-[116px] rounded-full bg-white font-semibold ">
-                  Happy Customers
-                </button>
-                <button className="drop-shadow-lg sm:drop-shadow-none h-[68px] sm:h-[116px] w-[68px] sm:w-[116px] rounded-full bg-white font-semibold ">
-                  Happy Customers
-                </button>
+                {listOfHighlightReels.map((reel) => (
+                  <button className="drop-shadow-lg sm:drop-shadow-none h-[68px] sm:h-[116px] w-[68px] sm:w-[116px] rounded-full bg-white font-semibold ">
+                    {reel}
+                  </button>
+                ))}
               </div>
 
               <div className="h-fit sm:py-2">
