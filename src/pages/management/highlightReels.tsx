@@ -1,7 +1,7 @@
-import HighlightReelsManagement from "@/components/manage/ManageHighlightReels";
-import ManageEntityMenu from "@/components/manage/ManageEntityLeftMenu";
+import HighlightReelsManagement from "@/components/manageEntityInfoComponents/ManageHighlightReels";
+import ManageEntityMenu from "@/components/manageEntityInfoComponents/ManageEntityLeftMenu";
 import ToggleButton from "@/components/ToggleButton";
-import DropdownManagement from "@/components/DropdownManagement";
+import DropdownManagement from "@/components/MobileDropdownManagement";
 
 export default function Home() {
   return (

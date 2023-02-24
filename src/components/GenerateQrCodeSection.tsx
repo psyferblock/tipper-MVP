@@ -1,4 +1,4 @@
-import DropdownManagement from "./DropdownManagement";
+import DropdownManagement from "./MobileDropdownManagement";
 
 export default function Home() {
   return (

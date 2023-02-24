@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 
 export default function Home() {
   // BOOLEAN TO DETERMINE WHETHER IT IS ADD HIGHLIGHT OR SHARE BUTTON NEXT TO HIGHLIGHTS
-  const userIsOwner = useState(true);
+  const userIsOwner = true;
 
   const router = useRouter();
 
@@ -28,9 +28,12 @@ export default function Home() {
     <>
       <div className="flex items-center justify-between sm:hidden h-14 px-3 bg-gray-300 w-full z-50 fixed text-2xl font-bold">
         <p>Entity Name</p>
-        <button className=" h-fit rounded-3xl mt-1 text-blue-500  text-xs">
+        <a
+          href="/management/menu"
+          className=" h-fit rounded-3xl mt-1 text-blue-500  text-xs"
+        >
           Manage Entity
-        </button>
+        </a>
       </div>
       <div className="h-14 sm:h-0"></div>
 
@@ -91,7 +94,7 @@ export default function Home() {
                     {/* ADD HIGHLIGHT BUTTON IF USER IS ENTITY OWNER */}
                     <button
                       onClick={handleAddHighlightButton}
-                      className="h-[116px] w-[116px] py-10 rounded-full bg-white font-semibold pb-3"
+                      className="h-[68px] sm:h-[116px] w-[68px] sm:w-[116px] my-2 sm:my-0 sm:py-10 rounded-full bg-white font-semibold sm:pb-3"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +102,7 @@ export default function Home() {
                         viewBox="0 0 24 24"
                         strokeWidth={3}
                         stroke="currentColor"
-                        className="w-10 h-7 text-blue-500 mx-auto"
+                        className="w-5 h-5 sm:w-10 sm:h-7 text-blue-500 mx-auto"
                       >
                         <path
                           strokeLinecap="round"

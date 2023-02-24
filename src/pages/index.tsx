@@ -3,6 +3,12 @@ import EntitiesCardsRow from "@/components/landing page/EntitiesCardsRow";
 import Navbar from "@/components/NavBar";
 
 export default function Home() {
+  const industries = [
+    "Popular Entities",
+    "Service Industry",
+    "Arts & Entertainment",
+    "Non-Profit",
+  ];
   return (
     <>
       <div className="sm:h-fit sm:min-h-screen px-3 sm:px-12 py-5 sm:py-8">
@@ -46,147 +52,60 @@ export default function Home() {
         </div>
         {/* /////////////////////////////////////////////////////////////////////////////////// */}
         {/* LISTING OF ENTITIES */}
-        <div className=" py-5 sm:py-10 space-y-3 sm:space-y-5">
-          {/* MOST POPULAR ENTITIES */}
-          <div>
-            {/* HEADER AND VIEW ALL BUTTON */}
-            {/* NOT ABSTRACTING THIS DIV IN THE ROW COMPONENT BECAUSE THE ML-400PX VARIES BETWEEN THIS DIV AND SERVICE INDUSTRY DIV */}
-            <div className="flex items-center justify-between pb-2 sm:pb-4">
-              <p className="font-bold text-lg sm:ml-[520px]">
-                Popular Entities
-              </p>
-              <a
-                className="text-sm text-blue-500 flex items-center sm:space-x-1"
-                href=""
-              >
-                View Popular
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2.5}
-                  stroke="currentColor"
-                  className="w-5 h-5 text-blue-500 pt-0.5 "
+        <div className=" py-5 sm:py-10 space-y-5 sm:space-y-5">
+          {industries.map((industry) => (
+            <div>
+              {/* MOBILE VERSION WITH FLEX */}
+              <div className="sm:hidden flex items-center justify-between  pb-2 sm:pb-2">
+                <p className="font-bold text-lg sm:text-center">{industry}</p>
+                <a
+                  className="text-sm text-blue-500 justify-end flex items-center sm:space-x-1"
+                  href="/verticalEntities"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                  />
-                </svg>
-              </a>
-            </div>
-            <EntitiesCardsRow />
-          </div>
-          {/* /////////////////////////////////////////////////////////////////////////////////// */}
-
-          {/* SERVICE INDUSTRY */}
-          <div>
-            {/* HEADER AND VIEW ALL BUTTON */}
-            <div className="sm:pb-4">
-              <div className="flex items-center justify-between pb-2">
-                <p className="sm:flex font-bold text-lg sm:ml-[519px]">
-                  Service Industry
-                </p>
-                <div>
-                  <a
-                    className="text-sm text-blue-500 flex items-center space-x-1"
-                    href=""
+                  View All
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2.5}
+                    stroke="currentColor"
+                    className="w-5 h-5 text-blue-500 pt-0.5 "
                   >
-                    View All
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={2.5}
-                      stroke="currentColor"
-                      className="w-5 h-5 text-blue-500 pt-0.5"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                      />
-                    </svg>
-                  </a>
-                </div>
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                    />
+                  </svg>
+                </a>
               </div>
-            </div>
-            <EntitiesCardsRow />
-          </div>
-          {/* /////////////////////////////////////////////////////////////////////////////////// */}
-
-          {/* ART AND ENTERTAINMENT INDUSTRY */}
-          <div>
-            {/* HEADER AND VIEW ALL BUTTON */}
-            <div className="sm:pb-4">
-              <div className="flex items-center justify-between  pb-2">
-                <p className="sm:flex font-bold text-lg sm:ml-[500px]">
-                  Art & Entertainment
-                </p>
-                <div>
-                  <a
-                    className="text-sm text-blue-500 flex items-center space-x-1"
-                    href=""
+              {/* DESKTOP VERSION WITHOUT FLEX */}
+              <div className="hidden sm:block pb-2">
+                <p className="font-bold text-lg sm:text-center">{industry}</p>
+                <a
+                  className="text-sm text-blue-500 justify-end flex items-center sm:space-x-1"
+                  href="/verticalEntities"
+                >
+                  View All
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2.5}
+                    stroke="currentColor"
+                    className="w-5 h-5 text-blue-500 pt-0.5 "
                   >
-                    View All
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={2.5}
-                      stroke="currentColor"
-                      className="w-5 h-5 text-blue-500 pt-0.5"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                      />
-                    </svg>
-                  </a>
-                </div>
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                    />
+                  </svg>
+                </a>
               </div>
+              <EntitiesCardsRow />
             </div>
-            <EntitiesCardsRow />
-          </div>
-
-          {/* /////////////////////////////////////////////////////////////////////////////////// */}
-
-          {/* NON PROFIT INDUSTRY */}
-          <div>
-            {/* HEADER AND VIEW ALL BUTTON */}
-            <div className="sm:pb-4">
-              <div className="flex items-center justify-between pb-2">
-                <p className="sm:flex font-bold text-lg sm:ml-[543px]">
-                  Non-Profit
-                </p>
-                <div>
-                  <a
-                    className="text-sm text-blue-500 flex items-center space-x-1"
-                    href=""
-                  >
-                    View All
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={2.5}
-                      stroke="currentColor"
-                      className="w-5 h-5 text-blue-500 pt-0.5"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <EntitiesCardsRow />
-          </div>
+          ))}
         </div>
       </div>
     </>

@@ -56,6 +56,7 @@ export default function Home(props) {
                         id="price"
                         className="h-12 block w-full rounded-md border-gray-300 pl-3 sm:pl-7 sm:pr-12 mt-1 mb-3 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                         placeholder="Type new name for category"
+                        ref={cancelButtonRef}
                       />
                     </div>
                   </div>
@@ -65,7 +66,6 @@ export default function Home(props) {
                     type="button"
                     className="mr-5 sm:mr-2 inline-flex justify-center rounded-3xl border border-gray-300 bg-white px-8 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
                     onClick={props.closeModal}
-                    ref={cancelButtonRef}
                   >
                     Cancel
                   </button>

@@ -1,10 +1,18 @@
+import { useRouter } from "next/router";
+
 export default function SignIn() {
+  const router = useRouter();
+
+  const handleBackButton = () => {
+    router.push("/");
+  };
+
   return (
     <div className="sm:h-fit sm:min-h-screen sm:px-0 px-3 py-5 sm:py-0">
       <div className="sm:flex">
         {/* LEFT PART OF SCREEN */}
         <div className="sm:w-1/3 sm:mt-5 mb-10 sm:px-5">
-          <button className="flex items-center ">
+          <button onClick={handleBackButton} className="flex items-center ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -72,7 +80,10 @@ export default function SignIn() {
           </button>
           <div className="flex items-center justify-center mt-3 space-x-1">
             <p>Don't have an account?</p>
-            <a className="underline hover:text-blue-600 font-semibold" href="">
+            <a
+              href="/signUp"
+              className="underline hover:text-blue-600 font-semibold"
+            >
               Sign Up Here
             </a>
           </div>

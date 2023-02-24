@@ -1,9 +1,9 @@
 import AddNewItemModal from "@/components/modals/AddNewItemModal";
 import AddNewMenuCategoryModal from "@/components/modals/AddNewMenuCategoryModal";
-import DropdownManagement from "@/components/DropdownManagement";
+import DropdownManagement from "@/components/MobileDropdownManagement";
 import EditItemModal from "@/components/modals/EditItemModal";
-import EditMenuCategoryModal from "@/components/modals/EditMenuCategoryModal";
-import ManageEntityMenu from "@/components/manage/ManageEntityLeftMenu";
+import EditMenuCategoryNameModal from "@/components/modals/EditMenuCategoryNameModal";
+import ManageEntityMenu from "@/components/manageEntityInfoComponents/ManageEntityLeftMenu";
 import MenuCategoryCard from "@/components/MenuCategoryCard";
 import SearchBar from "@/components/SearchBar";
 import ToggleButton from "@/components/ToggleButton";
@@ -12,6 +12,15 @@ import { useState } from "react";
 export default function Home() {
   //Owner chooses between pdf and manually inputting items
   const [isPdf, setIsPdf] = useState(false);
+
+  const menuCategories = [
+    "Breakfast",
+    "Lunch",
+    "Dinner",
+    "Desert",
+    "Drinks",
+    "Our Specialties",
+  ];
 
   //Edit Category Name Modal
   const [isEditCategoryNameModalOpen, setIsEditCategoryNameModalOpen] =
@@ -69,6 +78,7 @@ export default function Home() {
         <div className="flex sm:space-x-4">
           {/* LEFT MENU */}
           <ManageEntityMenu />
+
           {/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
           {/* <div className="flex flex-col space-y-3 sm:space-y-2 w-full"> */}
 
@@ -138,10 +148,13 @@ export default function Home() {
               </div>
             ) : (
               <>
-                {/* SEARCH CATEGORY SEARCH BAR */}
+                {/* "SEARCH FOR A CATEGORY" SEARCH BAR */}
                 <SearchBar placeHolder="Seach for a category" />
                 {/* ADD CATEGORY FOR MOBILE */}
-                <button className="sm:hidden text-blue-500 flex items-center justify-end space-x-1">
+                <button
+                  onClick={handleAddCategoryButton}
+                  className="sm:hidden w-fit text-blue-500 flex items-center justify-between space-x-1"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -161,33 +174,33 @@ export default function Home() {
                 <div>
                   {/* MENU CATEGORIES */}
                   <div className="grid sm:grid-cols-4 gap-4">
-                    <MenuCategoryCard
-                      type="Breakfast"
-                      click={handleEditCategoryNameButton}
-                    />
-                    <MenuCategoryCard type="Entry" />
-                    <MenuCategoryCard type="Main" />
-                    <MenuCategoryCard type="Desert" />
-                    <MenuCategoryCard type="Drinks" />
-                    <MenuCategoryCard type="Offers" />
+                    {menuCategories.map((category) => (
+                      <MenuCategoryCard
+                        type={category}
+                        openEditNameModal={handleEditCategoryNameButton}
+                      />
+                    ))}
                   </div>
                 </div>
               </>
             )}
           </div>
         </div>
-        <EditMenuCategoryModal
-          open={isEditCategoryNameModalOpen}
-          closeModal={closeEditCategoryNameModal}
-          saveButtonInModalIsClicked={saveButtonInModalIsClicked}
-        />
-        <AddNewMenuCategoryModal
-          open={isAddCategoryModalOpen}
-          closeModal={closeAddCategoryModal}
-          saveAsDraftButtonInModalIsClicked={saveAsDraftButtonInModalIsClicked}
-          publishButtonInModalIsClicked={publishButtonInModalIsClicked}
-        />
       </div>
+      {/* ////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
+      {/* MODALS */}
+      <EditMenuCategoryNameModal
+        open={isEditCategoryNameModalOpen}
+        closeModal={closeEditCategoryNameModal}
+        saveButtonInModalIsClicked={saveButtonInModalIsClicked}
+      />
+      <AddNewMenuCategoryModal
+        open={isAddCategoryModalOpen}
+        closeModal={closeAddCategoryModal}
+        saveAsDraftButtonInModalIsClicked={saveAsDraftButtonInModalIsClicked}
+        publishButtonInModalIsClicked={publishButtonInModalIsClicked}
+      />
     </>
   );
 }

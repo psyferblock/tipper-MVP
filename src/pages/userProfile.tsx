@@ -1,6 +1,12 @@
 import Navbar from "@/components/NavBar";
+import { useRouter } from "next/router";
 
 export default function Home() {
+  const router = useRouter();
+
+  const handleCreateNowButton = () => {
+    router.push("/entityCreationForm");
+  };
   return (
     <>
       <p className="h-14 pl-3 sm:pl-16 sm:h-fit pt-3 sm:pt-6 sm:mt-0 sm:pb-5 bg-gray-300 w-full z-50 sm:z-0 fixed sm:relative sm:mb-0 text-2xl sm:text-2xl font-bold sm:font-bold">
@@ -23,7 +29,10 @@ export default function Home() {
                     and the heavens and then all the kingdom.
                   </p>
                 </div>
-                <button className="bg-blue-500 text-white w-fit px-5  sm:w-40 h-10 sm:h-10 rounded-3xl sm:rounded-3xl sm:text-sm sm:hover:text-lg">
+                <button
+                  onClick={handleCreateNowButton}
+                  className="bg-blue-500 text-white w-fit px-5  sm:w-40 h-10 sm:h-10 rounded-3xl sm:rounded-3xl sm:text-sm sm:hover:text-base"
+                >
                   Create Now
                 </button>
                 {/* <button className="bg-blue-500 text-white w-fit px-5 sm:w-48 sm:px-5 h-10 sm:h-10 rounded-3xl sm:rounded-3xl sm:text-sm ">

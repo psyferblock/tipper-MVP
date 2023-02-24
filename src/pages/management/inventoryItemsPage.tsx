@@ -1,4 +1,4 @@
-import ManageMenuItems from "@/components/manage/ManageMenuItems";
+import ManageMenuItems from "@/components/manageEntityInfoComponents/ManageMenuItemsMobile";
 import SearchBar from "@/components/SearchBar";
 import ToggleButton from "@/components/ToggleButton";
 
@@ -24,7 +24,7 @@ export default function Home() {
                     <tr>
                       <th className="pr-96 pb-4">Item</th>
                       <th className="pr-96 pb-4">Status</th>
-                      <th className="pr-96 pb-4">Publish/Unpublish</th>
+                      <th className="pr-96 pb-4">Publish</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-300 text-gray-500">
@@ -151,6 +151,8 @@ export default function Home() {
           <ManageMenuItems />
         </div>
       </div>
+      {/* <AddNewItemModal /> */}
+      {/* <EditItemModal /> */}
     </>
   );
 }

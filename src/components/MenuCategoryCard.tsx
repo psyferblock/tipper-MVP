@@ -30,7 +30,10 @@ export default function Home(props) {
             <p>Publish</p>
           </div>
         </div>
-        <button className="sm:hidden w-fit text-xs flex text-blue-500 pt-1">
+        <button
+          onClick={props.openEditNameModal}
+          className="sm:hidden w-fit text-xs flex text-blue-500 pt-1"
+        >
           Edit Name
         </button>
       </div>
@@ -41,7 +44,10 @@ export default function Home(props) {
           <ToggleButton />
           <p className="pt-0.5">Publish</p>
         </div>
-        <button onClick={props.click} className="text-blue-500 pb-1">
+        <button
+          onClick={props.openEditNameModal}
+          className="text-blue-500 pb-1"
+        >
           Edit Name
         </button>
       </div>

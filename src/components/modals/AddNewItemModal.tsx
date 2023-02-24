@@ -1,18 +1,18 @@
 import { Fragment, useRef, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 
-export default function Example() {
-  const [open, setOpen] = useState(true);
+export default function Example(props) {
+  // const [open, setOpen] = useState(true);
 
   const cancelButtonRef = useRef(null);
 
   return (
-    <Transition.Root show={open} as={Fragment}>
+    <Transition.Root show={props.open} as={Fragment}>
       <Dialog
         as="div"
         className="relative z-50"
         initialFocus={cancelButtonRef}
-        onClose={setOpen}
+        onClose={props.closeModal}
       >
         <Transition.Child
           as={Fragment}
@@ -48,7 +48,10 @@ export default function Example() {
                         >
                           Add New Item
                         </Dialog.Title>
-                        <button className="sm:hidden">
+                        <button
+                          onClick={props.closeModal}
+                          className="sm:hidden"
+                        >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
@@ -76,6 +79,7 @@ export default function Example() {
                         id="item name"
                         className="h-12 block w-full rounded-md border-gray-300 pl-4 sm:pr-[235px] mt-1 mb-4 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                         placeholder="Item name"
+                        ref={cancelButtonRef}
                       />
                       {/* ITEM DESCRIPTION */}
                       <div className="flex justify-between text-xs">
@@ -154,21 +158,20 @@ export default function Example() {
                 </div>
                 <div className="bg-gray-50 opacity-95 sm:h-14 pb-2  sm:relative bottom-0 left-0 right-0 px-4 sm:px-6 sm:py-3 flex justify-end sm:justify-between items-center">
                   <div className="hidden sm:block">
-                    <button>Cancel</button>
+                    <button onClick={props.closeModal}>Cancel</button>
                   </div>
                   <div className="space-x-3 sm:space-x-3">
                     <button
                       type="button"
                       className="mt-3 inline-flex justify-center rounded-3xl border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
-                      onClick={() => setOpen(false)}
-                      ref={cancelButtonRef}
+                      onClick={props.saveAsDraftButtonInModalIsClicked}
                     >
                       Save as Draft
                     </button>
                     <button
                       type="button"
                       className="inline-flex justify-center rounded-3xl border border-transparent bg-blue-500 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
-                      onClick={() => setOpen(false)}
+                      onClick={props.publishButtonInModalIsClicked}
                     >
                       Publish
                     </button>

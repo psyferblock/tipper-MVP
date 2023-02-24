@@ -4,13 +4,14 @@ import { Dialog, Transition } from "@headlessui/react";
 export default function Home(props) {
   // const [open, setOpen] = useState(true);
 
+  //Apply "cancelButtonRef" to field to decide which section is focused on when modal is opened
   const cancelButtonRef = useRef(null);
 
   return (
     <Transition.Root show={props.open} as={Fragment}>
       <Dialog
         as="div"
-        className="relative z-10"
+        className="relative z-50"
         initialFocus={cancelButtonRef}
         onClose={props.closeModal}
       >
@@ -48,7 +49,10 @@ export default function Home(props) {
                         >
                           Add New Category
                         </Dialog.Title>
-                        <button className="sm:hidden">
+                        <button
+                          onClick={props.closeModal}
+                          className="sm:hidden"
+                        >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
@@ -69,13 +73,14 @@ export default function Home(props) {
                         <p>Category Name</p>
                         <p className="text-gray-400">150</p>
                       </div>
-                      {/* TAG INPUT FIELD */}
+                      {/* CATEGORY NAME INPUT FIELD */}
                       <input
                         type="text"
                         name="tags"
                         id="price"
                         className="h-12 block w-full rounded-md border-gray-300 pl-4 pr-12 mt-1 mb-3 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                         placeholder="Type new category name"
+                        ref={cancelButtonRef}
                       />
                     </div>
                   </div>
@@ -89,7 +94,6 @@ export default function Home(props) {
                       type="button"
                       className="mt-3 inline-flex justify-center rounded-3xl border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
                       onClick={props.saveAsDraftButtonInModalIsClicked}
-                      ref={cancelButtonRef}
                     >
                       Save as Draft
                     </button>

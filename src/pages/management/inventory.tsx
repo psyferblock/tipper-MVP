@@ -1,25 +1,25 @@
 import AddNewItemModal from "@/components/modals/AddNewItemModal";
 import AddNewMenuCategoryModal from "@/components/modals/AddNewMenuCategoryModal";
-import DropdownManagement from "@/components/DropdownManagement";
+import DropdownManagement from "@/components/MobileDropdownManagement";
 import EditItemModal from "@/components/modals/EditItemModal";
-import EditMenuCategoryModal from "@/components/modals/EditMenuCategoryModal";
-import ManageEntityMenu from "@/components/manage/ManageEntityLeftMenu";
+import EditMenuCategoryNameModal from "@/components/modals/EditMenuCategoryNameModal";
+import ManageEntityMenu from "@/components/manageEntityInfoComponents/ManageEntityLeftMenu";
 import MenuCategoryCard from "@/components/MenuCategoryCard";
 import SearchBar from "@/components/SearchBar";
 import ToggleButton from "@/components/ToggleButton";
 import { useState } from "react";
 
 export default function Home() {
-  // const [categoryNames[], setCategoryNames] = useState([
-  //   "Breakfast",
-  //   "Entry",
-  //   "Main",
-  //   "Desert",
-  //   "Drinks",
-  //   "Offers",
-  // ]);
-
   const [isPdf, setIsPdf] = useState(false);
+
+  const inventoryCategories = [
+    "Arak",
+    "Soap",
+    "Jars",
+    "Halewe",
+    "Jams",
+    "Mouneh",
+  ];
 
   return (
     <>
@@ -106,7 +106,7 @@ export default function Home() {
                 {/* SEARCH CATEGORY SEARCH BAR */}
                 <SearchBar placeHolder="Seach for a category" />
                 {/* ADD CATEGORY FOR MOBILE */}
-                <button className="sm:hidden text-blue-500 flex items-center justify-end space-x-1">
+                <button className="sm:hidden w-fit text-blue-500 flex items-center justify-end space-x-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -126,21 +126,18 @@ export default function Home() {
                 <div>
                   {/* MENU CATEGORIES */}
                   <div className="grid sm:grid-cols-4 gap-4">
-                    <MenuCategoryCard type="Arak" />
-                    <MenuCategoryCard type="Soap" />
-                    <MenuCategoryCard type="Jars" />
-                    <MenuCategoryCard type="Halewe" />
+                    {inventoryCategories.map((category) => (
+                      <MenuCategoryCard type={category} />
+                    ))}
                   </div>
                 </div>
               </>
             )}
           </div>
         </div>
-        <EditMenuCategoryModal />
-        {/* <AddNewMenuCategoryModal /> */}
-        {/* <AddNewItemModal /> */}
-        {/* <EditItemModal /> */}
       </div>
+      {/* <EditMenuCategoryNameModal />
+        <AddNewMenuCategoryModal /> */}
     </>
   );
 }

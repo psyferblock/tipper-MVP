@@ -1,7 +1,7 @@
-import DropdownManagement from "@/components/DropdownManagement";
+import DropdownManagement from "@/components/MobileDropdownManagement";
 import ExchangeRateDollarInput from "@/components/ExchangeRateDollarInput";
 import ExchangeRateLiraInput from "@/components/ExchangeRateLiraInput";
-import ManageEntityMenu from "@/components/manage/ManageEntityLeftMenu";
+import ManageEntityMenu from "@/components/manageEntityInfoComponents/ManageEntityLeftMenu";
 import SearchBar from "@/components/SearchBar";
 
 export default function Home() {

@@ -1,4 +1,4 @@
-import DropdownManagement from "@/components/DropdownManagement";
+import DropdownManagement from "@/components/MobileDropdownManagement";
 import GenerateQrCodeSection from "@/components/GenerateQrCodeSection";
 
 export default function Home() {
