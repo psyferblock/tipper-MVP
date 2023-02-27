@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <>
       <a
-        href="entityPage"
+        href="/entityPage"
         className="bg-gray-400 w-60 sm:w-[342px] h-40 sm:h-[162px] drop-shadow-lg rounded-md sm:pb-6"
       >
         {/* <!-- Pin to bottom left corner --> */}

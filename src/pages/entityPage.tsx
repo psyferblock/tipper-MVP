@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 
 export default function Home() {
   // BOOLEAN TO DETERMINE WHETHER IT IS ADD HIGHLIGHT OR SHARE BUTTON NEXT TO HIGHLIGHTS
-  const userIsOwner = true;
+  const userIsOwner = false;
 
   const listOfHighlightReels = [
     "Events",
@@ -108,7 +108,10 @@ export default function Home() {
                   </>
                 ) : (
                   <div className="sm:h-[116px] ml-1 sm:ml-0 sm:w-[116px] sm:py-3 rounded-lg bg-white font-semibold text-xs border-2 border-black">
-                    <button className="flex items-center space-x-1 pl-2 text-[#128c7e] hover:text-green-500 h-1/2">
+                    <a
+                      href="whatsapp://send?text=This is WhatsApp sharing example using link"
+                      className="flex items-center space-x-1 pl-2 text-[#128c7e] hover:text-green-500 h-1/2"
+                    >
                       {/* WHATSAPP LOGO */}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -121,8 +124,13 @@ export default function Home() {
                         />
                       </svg>
                       <p> Share page</p>
-                    </button>
-                    <button className="flex items-center text-blue-600 hover:text-purple-500 h-1/2 ">
+                    </a>
+                    <button
+                      onClick={() => {
+                        navigator.clipboard.writeText("hello");
+                      }}
+                      className="flex items-center text-blue-600 hover:text-purple-500 h-1/2 "
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
